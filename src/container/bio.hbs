@@ -1,0 +1,193 @@
+{{!--
+Це код container файлу для bio сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
+--}}
+
+<div>
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+    <hr />
+    <div>
+        <p><b>Birth date:</b> {{birthdate}}</p>
+    </div>
+    <div>
+        <p><b>Birth place:</b> {{birthplace}}</p>
+    </div>
+    <div>
+        <p><b>Death date:</b> {{deathdate}}</p>
+    </div>
+    <div>
+        <p><b>Death place:</b> {{deathplace}}</p>
+    </div>
+    <div>
+        <p><b>Nationalitye:</b> {{nationality}}</p>
+    </div>
+    <div>
+        <p><b>Occupation:</b> {{occupation}}</p>
+    </div>
+    <br />
+    <div>
+        <b>Known for:</b>
+    </div>
+    <ul>
+        {{#each known_for}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    <br />
+    <hr />
+    <section>
+        {{> title data="Education:" big=true}}
+        <ul>
+            {{#each education}}
+            <li>
+                <div>
+                    <b>Degree: {{degree}}</b>
+                </div>
+                <br />
+                <div>
+                    <em>Field: {{field}}</em>
+                </div>
+                <div>
+                    <p>Institution: {{institution}}</p>
+                </div>
+                <div>
+                    <p>Year: {{year}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <br />
+    <hr />
+    <section>
+        {{> title data="Notable publications:" big=true}}
+        <ul>
+            {{#each notable_publications}}
+            <li>
+                <div>
+                    <b>{{title}}</b>
+                </div>
+                <div>
+                    <p>Year: {{year}}</p>
+                </div>
+                <div>
+                    <p>Publisher: {{publisher}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <br />
+    <hr />
+    <section>
+        {{> title data="Partners:" big=true}}
+        <ul>
+            {{#each partners}}
+            <li>
+                <div>
+                    <b>{{name}}</b>
+                </div>
+                <br />
+                <div>
+                    <em>Relationship: {{relationship}}</em>
+                </div>
+                <div>
+                    <p>Years: {{years}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <br />
+    <hr />
+    <section>
+        {{> title data="Awards:" big=true}}
+        <ul>
+            {{#each awards}}
+            <li>
+                <div>
+                    <b>{{title}}</b>
+                </div>
+                <div>
+                    <p>Year: {{year}}</p>
+                </div>
+                <div>
+                    <p>{{description}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <hr />
+    {{> title data="Influences:" big=true}}
+    <ul>
+        {{#each influences}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    <br />
+    <hr />
+    {{> title data="Influenced:" big=true}}
+    <ul>
+        {{#each influenced}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    <br />
+    <hr />
+    {{> title data="Quotes:" big=true}}
+    {{#each quotes}}
+    <div>
+        <q>{{this}}</q>
+    </div>
+    {{/each}}
+    <br />
+    <br />
+    <hr />
+    <section>
+        {{> title data="Major discoverie:" big=true}}
+        <ul>
+            {{#each major_discoverie}}
+            <li>
+                <div>
+                    <b>{{title}}</b>
+                </div>
+                <br />
+                <div>
+                    <p>Year: {{year}}</p>
+                </div>
+                <div>
+                    <p>{{description}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <div>
+        <div>
+            <b>Contributions:</b>
+        </div>
+        <br />
+        {{#with contributions}}
+        <div>
+            <em>{{title}}</em>
+        </div>
+        <div>
+            <p>{{description}}</p>
+        </div>
+        <div>
+            <p>Year: {{year}}</p>
+        </div>
+        <div>
+            <p>Field: {{field}}</p>
+        </div>
+        {{/with}}
+    </div>
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/bio.hbs
+Адже наш layout/bio.hbs має вже структуру HTML
+--}}
