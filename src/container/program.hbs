@@ -1,0 +1,192 @@
+{{!--
+Це код container файлу для person сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/person"
+--}}
+
+<div>
+    {{#with program}}
+    {{#with excursion}}
+    <div>
+        <div>
+            <h1>{{name}}</h1>
+        </div>
+        {{> title data="Location:" big=false}}
+        {{#with location}}
+        <div>
+            <div>
+                <p><b>City:</b> {{city}}</p>
+            </div>
+            <div>
+                <p><b>Country:</b> {{country}}</p>
+            </div>
+        </div>
+        {{/with}}
+        <div>
+            <p><b>Date:</b> {{date}}</p>
+        </div>
+        <br />
+        <hr />
+        <br />
+        {{> title data="Program:" big=false}}
+        {{#each program}}
+        <div>
+
+            <div>
+                <div>
+                    <mark><b>{{name}}</b></mark>
+                </div>
+
+                <div>
+                    <p><b>Type:</b> {{type}}</p>
+                </div>
+
+                <div>
+                    <p><b>Duration:</b> {{duration}}</p>
+                </div>
+
+                <div>
+                    <p><b>Details:</b></p>
+                </div>
+                {{#with details}}
+                <div>
+
+                    {{#if museum}}
+                    <div>
+                        <div>
+                            <em>Museum:</em>
+                        </div>
+                        <br />
+                        {{#with museum}}
+                        <div>
+                            <div>
+                                <b>{{name}}</b>
+                            </div>
+                            <br />
+                            <div>
+                                <em>Location:</em>
+                            </div>
+                            {{#with location}}
+                            <div>
+                                <div>
+                                    <p>Address: {{address}}</p>
+                                </div>
+                                <div>
+                                    <p>City: {{city}}</p>
+                                </div>
+                                <div>
+                                    <p>Country: {{country}}</p>
+                                </div>
+                            </div>
+                            {{/with}}
+                            <div>
+                                <em>Exhibits:</em>
+                            </div>
+                            <ul>
+                                {{#each exhibits}}
+                                <li>
+                                    <div>
+                                        <b>{{name}}</b>
+                                    </div>
+                                    <div>
+                                        <p>Artist: {{artist}}</p>
+                                    </div>
+                                    <div>
+                                        <p>Description: {{description}}</p>
+                                    </div>
+                                    <div>
+                                        <p>Audio guide: {{audio_guide}}</p>
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/if}}
+
+                    {{#if venue}}
+                    <div>
+                        <div>
+                            <em>Venue:</em>
+                        </div>
+                        <br />
+                        {{#with venue}}
+                        <div>
+                            <div>
+                                <b>{{name}}</b>
+                            </div>
+                            <br />
+                            <div>
+                                <em>Location:</em>
+                            </div>
+                            {{#with location}}
+                            <div>
+                                <div>
+                                    <p><b>Address:</b> {{address}}</p>
+                                </div>
+                                <div>
+                                    <p><b>City:</b> {{city}}</p>
+                                </div>
+                                <div>
+                                    <p><b>Country:</b> {{country}}</p>
+                                </div>
+                            </div>
+                            {{/with}}
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/if}}
+
+                    {{#if performers}}
+                    <div>
+                        <div>
+                            <em>Performers:</em>
+                        </div>
+                        <ul>
+                            {{#each performers}}
+                            <li>
+                                <div>
+                                    <p>{{name}}</p>
+                                </div>
+                                <div>
+                                    <p>{{type}}</p>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+
+                    <div>
+                        <em>Guide:</em>
+                    </div>
+                    <br />
+                    {{#with guide}}
+                    <div>
+                        <div>
+                            <b>{{name}}</b>
+                        </div>
+                        <div>
+                            <p>Language: {{language}}</p>
+                        </div>
+                        <div>
+                            <p>Rating: {{rating}}</p>
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+    {{/with}}
+    {{/with}}
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/person.hbs
+Адже наш layout/person.hbs має вже структуру HTML
+--}}
