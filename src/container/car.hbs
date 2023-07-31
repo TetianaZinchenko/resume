@@ -1,0 +1,344 @@
+{{!--
+Це код container файлу для car сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/car"
+--}}
+
+<div>
+    <div>
+        <br />
+        <div>
+            <h1>{{make}}</h1>
+        </div>
+        <br />
+
+        <div>
+            <p><b>Model:</b> <span class="badge text-bg-warning">{{model}}</span></p>
+        </div>
+
+        <div>
+            <p><b>Year:</b> {{year}}</p>
+        </div>
+
+        <div>
+            <p><b>Color:</b> <span class="badge text-bg-light">{{color}}</span></p>
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <div>
+            {{> title data="Features:" big=false}}
+            {{#with features}}
+
+            <div>
+                <div>
+                    <br />
+                    <div>
+                        <mark><b>Interior:</b></mark>
+                    </div>
+                    <br />
+                    {{#with interior}}
+
+                    <div>
+                        <div>
+                            <p><em>Seats:</em></p>
+                        </div>
+                        {{#with seats}}
+                        <div>
+                            <p>Material: {{material}}</p>
+                        </div>
+                        <div>
+                            <p>Color: <span class="badge text-bg-dark">{{color}}</span></p>
+                        </div>
+                        <div>
+                            <p>Heated: <span class="badge text-bg-info">{{heated}}</span></p>
+                        </div>
+                        <div>
+                            <p>Ventilated: <span class="badge text-bg-info">{{ventilated}}</span></p>
+                        </div>
+                        {{/with}}
+                    </div>
+
+                    <div>
+                        <div>
+                            <p><em>Dashboard:</em></p>
+                        </div>
+                        {{#with dashboard}}
+                        <div>
+                            <p>Material: {{material}}</p>
+                        </div>
+                        <div>
+                            <p>Color: <span class="badge text-bg-dark">{{color}}</span></p>
+                        </div>
+                        <div>
+                            <div>
+                                <p>Display:</p>
+                            </div>
+                            {{#with display}}
+                            <div>
+                                <p>Type: {{type}}</p>
+                            </div>
+                            <div>
+                                <p>Size: {{size}}</p>
+                            </div>
+                            <div>
+                                <p>Resolution: {{resolution}}</p>
+                            </div>
+                            <div>
+                                <p>Touchscreen: <span class="badge text-bg-info">{{touchscreen}}</span></p>
+                            </div>
+                            {{/with}}
+                        </div>
+                        {{/with}}
+                    </div>
+
+                    <div>
+                        <div>
+                            <p><em>Audio:</em></p>
+                        </div>
+                        {{#with audio}}
+                        <div>
+                            <p>System: {{system}}</p>
+                        </div>
+                        <div>
+                            <p>Speakers: <span class="badge text-bg-primary">{{speakers}}</span></p>
+                        </div>
+                        <div>
+                            <p>Subwoofer: <span class="badge text-bg-info">{{subwoofer}}</p>
+                        </div></span>
+                        <div>
+                            <p>Bluetooth: <span class="badge text-bg-info">{{bluetooth}}</span></p>
+                        </div>
+                        <div>
+                            <p>USB: <span class="badge text-bg-info">{{USB}}</span></p>
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+
+            <div>
+                <br />
+                <div>
+                    <mark><b>Exterior:</b></mark>
+                </div>
+                <br />
+                {{#with exterior}}
+
+                <div>
+                    <div>
+                        <p><em>Wheels:</em></p>
+                    </div>
+                    {{#with wheels}}
+                    <div>
+                        <p>Size: {{size}}</p>
+                    </div>
+                    <div>
+                        <p>Type: {{type}}</p>
+                    </div>
+                    <div>
+                        <p>Color: <span class="badge text-bg-light">{{color}}</span></p>
+                    </div>
+                    {{/with}}
+                </div>
+
+                <div>
+                    <div>
+                        <p><em>Headlights:</em></p>
+                    </div>
+                    {{#with headlights}}
+                    <div>
+                        <p>Type: {{type}}</p>
+                    </div>
+                    <div>
+                        <p>Brightness: {{brightness}}</p>
+                    </div>
+                    <div>
+                        <p>Automatic: <span class="badge text-bg-info">{{automatic}}</span></p>
+                    </div>
+                    {{/with}}
+                </div>
+
+                <div>
+                    <div>
+                        <p><em>Sunroof:</em></p>
+                    </div>
+                    {{#with sunroof}}
+                    <div>
+                        <p>Type: {{type}}</p>
+                    </div>
+                    <div>
+                        <p>Size: {{size}}</p>
+                    </div>
+                    <div>
+                        <p>Automatic: <span class="badge text-bg-info">{{automatic}}</span></p>
+                    </div>
+                    {{/with}}
+                </div>
+
+                {{/with}}
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <br />
+                <div>
+                    <mark><b>Safety:</b></mark>
+                </div>
+                <br />
+                {{#with safety}}
+
+                <div>
+                    <div>
+                        <p><em>Airbags:</em></p>
+                    </div>
+                    {{#with airbags}}
+                    <div>
+                        <p>Front: <span class="badge text-bg-primary">{{front}}</span></p>
+                    </div>
+                    <div>
+                        <p>Side: <span class="badge text-bg-primary">{{side}}</span></p>
+                    </div>
+                    <div>
+                        <p>Knee: <span class="badge text-bg-primary">{{knee}}</span></p>
+                    </div>
+                    <div>
+                        <p>Rear: <span class="badge text-bg-primary">{{rear}}</span></p>
+                    </div>
+                    {{/with}}
+                </div>
+
+                <div>
+                    <div>
+                        <p><em>Assistance:</em></p>
+                    </div>
+                    {{#with assistance}}
+                    <div>
+                        <p>blind spot monitoring: <span class="badge text-bg-info">{{blind_spot_monitoring}}</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>rear cross traffic alert: <span
+                                class="badge text-bg-info">{{rear_cross_traffic_alert}}</span></p>
+                    </div>
+                    <div>
+                        <p>lane departure warning: <span class="badge text-bg-info">{{lane_departure_warning}}</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>adaptive cruise control: <span class="badge text-bg-info">{{adaptive_cruise_control}}</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>collision warning: <span class="badge text-bg-info">{{collision_warning}}</span>
+                        </p>
+                    </div>
+                    {{/with}}
+                </div>
+
+                {{/with}}
+            </div>
+        </div>
+
+        {{/with}}
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div>
+        {{> title data="Engine:" big=false}}
+        {{#with engine}}
+        <div>
+            <p><b>Type:</b> {{type}}</p>
+        </div>
+        <div>
+            <p><b>Displacement:</b> {{displacement}}</p>
+        </div>
+        <div>
+            <p><b>Horsepower:</b> {{horsepower}}</p>
+        </div>
+        <div>
+            <p><b>Torque:</b> {{torque}}</p>
+        </div>
+        <div>
+            <div>
+                <p><b>Transmission:</b></p>
+            </div>
+            {{#with transmission}}
+            <div>
+                <p>type: {{type}}</p>
+            </div>
+            <div>
+                <p>gears: {{gears}}</p>
+            </div>
+            {{/with}}
+        </div>
+        {{/with}}
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div>
+        {{> title data="Fuel economy:" big=false}}
+        {{#with fuel_economy}}
+        <div>
+            <p><b>City:</b> {{city}}</p>
+        </div>
+        <div>
+            <p><b>Highway:</b> {{highway}}</p>
+        </div>
+        <div>
+            <p><b>Combined:</b> {{combined}}</p>
+        </div>
+        {{/with}}
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div>
+        {{> title data="Price:" big=false}}
+        {{#with price}}
+        <div>
+            <p><b>Base:</b> {{base}}</p>
+        </div>
+        <div>
+            <p><b>Destination:</b> {{destination}}</p>
+        </div>
+        <div>
+            <div>
+                <p><b>Options:</b></p>
+                {{#with options}}
+                <div>
+                    <p>navigation: {{navigation}}</p>
+                </div>
+                <div>
+                    <p>moonroof: {{moonroof}}</p>
+                </div>
+                <div>
+                    <p>premium paint: {{premium_paint}}</p>
+                </div>
+                {{/with}}
+            </div>
+        </div>
+        <div>
+            <p><b>Total:</b> <span class="badge text-bg-warning">{{total}}</span></p>
+        </div>
+        {{/with}}
+    </div>
+
+</div>
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/car.hbs
+Адже наш layout/car.hbs має вже структуру HTML
+--}}

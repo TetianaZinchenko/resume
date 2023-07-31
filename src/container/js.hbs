@@ -1,0 +1,142 @@
+{{!--
+Це код container файлу для js сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/js"
+--}}
+
+<div>
+    <div>
+        <br />
+        <div>
+            <h1>{{name}}</h1>
+        </div>
+        <br />
+
+        <div>
+            <p><b>Description:</b> {{description}}</p>
+        </div>
+
+        {{> title data="History:" big=false}}
+        {{#with history}}
+        <div>
+            <div>
+                <p><b>Year:</b> {{year}}</p>
+            </div>
+            <div>
+                <p><b>Founder:</b> {{founder}}</p>
+            </div>
+        </div>
+        {{/with}}
+
+        {{> title data="Types:" big=false}}
+        <ul>
+            {{#each types}}
+            <li class="badge text-bg-primary">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        {{> title data="Syntax:" big=false}}
+        {{#with syntax}}
+        <div>
+            <div>
+                <div>
+                    <p><b>Variables:</b></p>
+                </div>
+                <ul>
+                    {{#each variables}}
+                    <li class="badge text-bg-secondary">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p><b>Functions:</b></p>
+                </div>
+                <ul>
+                    {{#each functions}}
+                    <li class="badge text-bg-secondary">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p><b>Conditionals:</b></p>
+                </div>
+                <ul>
+                    {{#each conditionals}}
+                    <li class="badge text-bg-secondary">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p><b>Loops:</b></p>
+                </div>
+                <ul>
+                    {{#each loops}}
+                    <li class="badge text-bg-secondary">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p><b>Classes:</b></p>
+                </div>
+                <ul>
+                    {{#each classes}}
+                    <li class="badge text-bg-secondary">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        {{/with}}
+
+        <div>
+            {{> title data="Features:" big=false}}
+            <ul>
+                {{#each features}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div>
+            {{> title data="Libraries:" big=false}}
+            <ul>
+                {{#each libraries}}
+                <li class="badge text-bg-primary">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div>
+            {{> title data="Tools:" big=false}}
+            <ul>
+                {{#each tools}}
+                <li class="badge text-bg-primary">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div>
+            {{> title data="Community:" big=false}}
+            <ul>
+                {{#each community}}
+                <li>
+                    {{!-- <div>
+                        <p><b>Name:</b> {{name}}</p>
+                    </div> --}}
+                    <button type="button" class="btn btn-link">{{name}}</button>
+                    <div>
+                        <p><b>Type:</b> {{type}}</p>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/js.hbs
+Адже наш layout/js.hbs має вже структуру HTML
+--}}
