@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bootstrap"
 --}}
 
-<main>
+<main class="p-5">
 
     <div class="display-1"><mark>Typography</mark></div>
 
@@ -920,7 +920,603 @@ A third item
         </div>
     </div>
 
+    <hr />
+    <hr />
 
+    <div class="display-1"><mark>Nav</mark></div>
+
+    <p>
+
+        Nav - це компонент, який створює навігаційне меню
+
+    <pre>
+    class Опис
+    
+    nav клас для контейнера
+    
+    nav-item клас для елемента
+    
+    nav-link клас для посилання всередині елемента
+    
+    active клас для активного посилання
+    
+    disabled клас для неактивного посилання
+    
+    flex-column клас для контейнера,
+    
+    щоб вивести елементи вертикально
+    
+    nav-tabs клас для контейнера, щоб вивести
+    меню навігації в форматі вкладок
+    </pre>
+
+    </p>
+
+    <div class="card">
+        <div class="nav">
+            <div class="nav-item">
+                <a href="#" class="nav-link">Home page</a>
+            </div>
+            <div class="nav-item">
+                {{!-- <a href="#" class="nav-link active">Bootstrap</a> --}}
+                <a href="#" class="nav-link disabled">Bootstrap</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link">Catalog</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link">FAQ page</a>
+                {{!-- <button class="btn btn-primary">Click!</button> --}}
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="card">
+        <div class="nav flex-column">
+            <div class="nav-item">
+                <a href="#" class="nav-link">Home page</a>
+            </div>
+            <div class="nav-item">
+                {{!-- <a href="#" class="nav-link active">Bootstrap</a> --}}
+                <a href="#" class="nav-link disabled">Bootstrap</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link">Catalog</a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="nav-link">FAQ page</a>
+                {{!-- <button class="btn btn-primary">Click!</button> --}}
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="card">
+        <div class="card-body">
+            <div class="nav flex-column">
+                <div class="nav-item">
+                    <div class="card">
+                        <a href="#" class="nav-link">Home page</a>
+                    </div>
+                </div>
+                <br />
+                <div class="nav-item">
+                    <div class="card">
+                        {{!-- <a href="#" class="nav-link active">Bootstrap</a> --}}
+                        <a href="#" class="nav-link disabled">Bootstrap</a>
+                    </div>
+                </div>
+                <br />
+                <div class="nav-item">
+                    <div class="card">
+                        <a href="#" class="nav-link">Catalog</a>
+                    </div>
+                </div>
+                <br />
+                <div class="nav-item">
+                    <div class="card">
+                        <a href="#" class="nav-link">FAQ page</a>
+                    </div>
+                    {{!-- <button class="btn btn-primary">Click!</button> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="nav flex-column">
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">Home page</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                {{!-- <a href="#" class="nav-link active">Bootstrap</a> --}}
+                                <a href="#" class="nav-link disabled">Bootstrap</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">Catalog</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">FAQ page</a>
+                            </div>
+                            {{!-- <button class="btn btn-primary">Click!</button> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row g-4">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="nav flex-column">
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">Home page</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                {{!-- <a href="#" class="nav-link active">Bootstrap</a> --}}
+                                <a href="#" class="nav-link disabled">Bootstrap</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">Catalog</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">FAQ page</a>
+                            </div>
+                            {{!-- <button class="btn btn-primary">Click!</button> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                Test
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="nav nav-tabs">
+                <div class="nav-item">
+                    <a href="#" class="nav-link active">Main</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Catalog</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Shop list</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="nav flex-column">
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">Home page</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                {{!-- <a href="#" class="nav-link active">Bootstrap</a> --}}
+                                <a href="#" class="nav-link disabled">Bootstrap</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">FAQ page</a>
+                            </div>
+                            {{!-- <button class="btn btn-primary">Click!</button> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                Test
+            </div>
+        </div>
+    </div>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>Breadcrumb</mark></div>
+
+    <p>
+
+        Breadcrumb (“хлібні крихти”) - це навігаційний компонент,
+        який відображає ієрархію сторінок на сайті та дозволяє
+        користувачеві легко повернутись до попередніх сторінок.
+
+    <pre>
+    class Опис
+    
+    breadcrumb клас для контейнера
+    
+    breadcrumb-item клас для елемента
+    </pre>
+
+    </p>
+
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">PC та Ноутбук</a>
+            </li>
+            <li class="breadcrumb-item">
+                {{!-- <a href="#">MacBook</a> --}}
+                MacBook
+            </li>
+        </ol>
+    </div>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>Badge</mark></div>
+
+    <p>
+
+        Badge - це компонент, який вказує значок з контентом
+
+    <pre>
+    class Опис
+    
+    badge клас для контейнера
+    
+    rounded-pill робить заокруглення країв компонента
+    </pre>
+
+    </p>
+
+    <div class="display-1"><mark>Background color</mark></div>
+
+    <p>
+
+    <pre>
+        class Опис
+        
+        text-bg-primary визначає основний колір
+        
+        text-bg-secondary визначає додатковий колір
+        
+        text-bg-success визначає зелений (успішний) колір
+        
+        text-bg-danger визначає червоний (небезпечний) колір
+        
+        text-bg-warning визначає жовтий (попереджувальний) колір
+        
+        text-bg-info визначає блакитний (інформаційний) колір
+        
+        text-bg-light визначає світлий колір
+        
+        text-bg-dark визначає темний колір
+        </pre>
+
+    </p>
+
+    <div>
+        <div class="row">
+            <div class="col-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">PC та Ноутбук</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        {{!-- <a href="#">MacBook</a> --}}
+                        MacBook
+                    </li>
+                </ol>
+            </div>
+            <div class="col-12">
+                <h6>Hello world! <span class="badge text-bg-primary">NEW</span></h6>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <h6>Hello world! <span class="badge text-bg-primary rounded-pill">NEW</span></h6>
+
+    <button class="btn btn-primary">Click me!</button>
+
+    <button class="btn btn-primary rounded-pill">Click me!</button>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>Alert</mark></div>
+
+    <p>
+
+        Alert - це компонент, який відображає повідомлення
+
+    <pre>
+    class Опис
+    
+    alert визначає контейнер для компонента
+    
+    alert-primary визначає основний колір
+    
+    alert-secondary визначає додатковий колір
+    
+    alert-success визначає зелений (успішний) колір
+    
+    alert-danger визначає червоний (небезпечний) колір
+    
+    alert-warning визначає жовтий (попереджувальний) колір
+    
+    alert-info визначає блакитний (інформаційний) колір
+    
+    alert-light визначає світлий колір
+    
+    alert-dark визначає темний колір
+    </pre>
+
+    </p>
+
+    <div class="row gx-2 gy-4">
+        <div class="col-12">
+            <h6>Hello world! <span class="badge text-bg-primary rounded-pill text-uppercase text-bg-primary">NEW</span>
+            </h6>
+            <button class="btn btn-primary rounded-pill">Click me!</button>
+            <div class="text-bg-primary">
+                <div class="alert alert-secondary">This is important info!</div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-12">
+            {{!-- <div class="text-bg-primary"> --}}
+                <div class="alert alert-dark">
+                    <h6>Hello world! <span class="badge rounded-pill  text-uppercase text-bg-primary">NEW</span></h6>
+                    <button class="btn btn-primary rounded-pill">Click me!</button>
+                </div>
+                {{!--
+            </div> --}}
+        </div>
+    </div>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>Зовнішні відступи</mark></div>
+
+    <p>
+
+    <pre>
+    class Опис
+    
+    m-* визначає зовнішні відступи для всіх сторін
+    
+    mt-* визначає зовнішні відступи для верхньої сторони
+    
+    mb-* визначає зовнішні відступи для нижньої сторони
+    
+    my-* визначає вертикальні зовнішні відступи
+    
+    ms-* визначає зовнішні відступи для лівої сторони
+    
+    me-* визначає зовнішні відступи для правої сторони
+    
+    mx-* визначає горизонтальні зовнішні відступи
+    
+    замініть * на число від 1 до 5, щоб визначити
+    на скільки великими мають бути відступи
+    </pre>
+
+    </p>
+
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary rounded-pill m-5 ms-0 me-0">Click me!</button>
+            <div class="alert alert-light">
+                <h6>Hello world! <span class="badge rounded-pill text-uppercase text-bg-primary">NEW</span></h6>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary rounded-pill mb-3">Click me!</button>
+            <div class="alert alert-light">
+                <h6>Hello world! <span class="badge rounded-pill text-uppercase text-bg-primary">NEW</span></h6>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="nav nav-tabs">
+                <div class="nav-item">
+                    <a href="#" class="nav-link active">Main</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Catalog</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Shop list</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="nav flex-column">
+                        <div class="nav-item mb-2">
+                            <div class="card">
+                                <a href="#" class="nav-link">Home page</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item mb-2">
+                            <div class="card">
+                                {{!-- <a href="#" class="nav-link active">Bootstrap</a> --}}
+                                <a href="#" class="nav-link disabled">Bootstrap</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="nav-item">
+                            <div class="card">
+                                <a href="#" class="nav-link">FAQ page</a>
+                            </div>
+                            {{!-- <button class="btn btn-primary">Click!</button> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                Test
+            </div>
+        </div>
+    </div>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>Внутрішні відступи</mark></div>
+
+    <p>
+
+    <pre>
+    class Опис
+    
+    p-* визначає внутрішні відступи для всіх сторін
+    
+    pt-* визначає внутрішні відступи для верхньої сторони
+    
+    pb-* визначає внутрішні відступи для нижньої сторони
+    
+    py-* визначає вертикальні внутрішні відступи
+    
+    ps-* визначає внутрішні відступи для лівої сторони
+    
+    pe-* визначає внутрішні відступи для правої сторони
+    
+    px-* визначає горизонтальні внутрішні відступи
+    
+    замініть * на число від 1 до 5, щоб визначити
+    на скільки великими мають бути відступи
+    </pre>
+
+    </p>
+
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="nav nav-tabs">
+                <div class="nav-item">
+                    <a href="#" class="nav-link active">Main</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Catalog</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Shop list</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                {{!-- <div class="card-body"> --}}
+                    <div class="pt-4 pb-3 px-4">
+                        <div class="nav flex-column">
+                            <div class="nav-item mb-2">
+                                <div class="card">
+                                    <a href="#" class="nav-link">Home page</a>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="nav-item mb-2">
+                                <div class="card">
+                                    {{!-- <a href="#" class="nav-link active">Bootstrap</a> --}}
+                                    <a href="#" class="nav-link disabled">Bootstrap</a>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="nav-item mb-2">
+                                <div class="card">
+                                    <a href="#" class="nav-link">FAQ page</a>
+                                </div>
+                                {{!-- <button class="btn btn-primary">Click!</button> --}}
+                            </div>
+                        </div>
+                    </div>
+                    {{!--
+                </div> --}}
+            </div>
+            <div class="col-8">
+                Test
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary rounded-pill mb-3">Click me!</button>
+            <div class="alert alert-light">
+                {{!-- <h6 class="m-0">Hello world! <span
+                        class="badge rounded-pill text-uppercase text-bg-primary">NEW</span>
+                </h6> --}}
+                <h6 class="mb-2">Hello world! <span class="badge rounded-pill text-uppercase text-bg-primary">NEW</span>
+                </h6>
+                <p class="m-0">This is info</p>
+            </div>
+        </div>
+    </div>
 
 
 
