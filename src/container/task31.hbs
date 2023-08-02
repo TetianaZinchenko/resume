@@ -1,0 +1,326 @@
+{{!--
+Це код container файлу для task31 сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/task31"
+--}}
+
+<div class="row gx-2 gy-4">
+
+    {{#with navigation}}
+
+    {{#each links}}
+
+    <div class="col-2">
+
+        <a href="{{href}}">{{text}}</a>
+
+    </div>
+
+    {{/each}}
+
+    {{#with button}}
+
+    <div class="col-2">
+        <a class="btn btn-primary" href="{{href}}">{{text}}</a>
+    </div>
+
+    {{/with}}
+
+    {{/with}}
+
+    <hr />
+
+    {{#with header}}
+
+    <div>
+
+        <h1>{{title}}</h1>
+
+        <p>{{description}}</p>
+
+        {{#with button}}
+
+        <button class="btn btn-primary" link="{{link}}">{{text}}</button>
+
+        {{/with}}
+
+    </div>
+
+    {{/with}}
+
+    <hr />
+
+    {{#with city}}
+
+    <h2>{{title}}</h2>
+
+    {{#each cards}}
+
+    <div class="col-5">
+
+        <div class="card">
+
+            {{#with picture}}
+
+            <img class="card-img-top" src="{{src}}" alt="{{alt}}" />
+
+            {{/with}}
+
+            <div class="card-body">
+
+                <h5 class="card-title">{{title}}</h5>
+
+                <p>{{description}}</p>
+
+                {{#with button}}
+
+                <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+
+                {{/with}}
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {{/each}}
+
+    {{/with}}
+
+    <hr />
+
+    {{#with winner}}
+
+    <h2>{{title}}</h2>
+
+    {{#with table}}
+
+    <table class="table">
+
+        <thead>
+
+            <tr>
+
+                {{#each head}}
+
+                <th>{{this}}</th>
+
+                {{/each}}
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {{#each user}}
+
+            <tr>
+
+                <th>{{place}}</th>
+
+                <td>{{name}}</td>
+
+                <td>{{surname}}</td>
+
+                <td>{{nickname}}</td>
+
+            </tr>
+
+            {{/each}}
+
+        </tbody>
+
+    </table>
+
+    {{/with}}
+
+    {{/with}}
+
+    <hr />
+
+    {{#with gallery}}
+
+    <h2>{{title}}</h2>
+
+    {{#each cards}}
+
+    <div class="col-4">
+
+        <div class="card">
+
+            <div class="card-header">{{name}}</div>
+
+            <ul class="list-group">
+
+                {{#each items}}
+
+                <li class="list-group-item">{{this}}</li>
+
+                {{/each}}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    {{/each}}
+
+    {{/with}}
+
+    <hr />
+
+    {{#with relaxion}}
+
+    <div class="display-3">{{title}}</div>
+
+    {{#each cards}}
+
+    <div class="col-6">
+
+        <div class="card text-bg-secondary">
+
+            <div class="card-header">{{header}}</div>
+
+            <div class="card-body">
+
+                <h6 class="card-title">{{title}}</h6>
+
+                <p>{{description}}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {{/each}}
+
+    {{/with}}
+
+    <hr />
+
+    {{#with rest}}
+
+    {{#each cards}}
+
+    <div class="col-6">
+
+        <div class="card">
+            <div class="card-header text-center">{{header}}</div>
+
+            <div class="card-body text-center">
+                <div class="card-title">{{title}}</div>
+                <p>
+                    {{description}}
+                </p>
+                <button class="btn btn-primary">{{button}}</button>
+            </div>
+
+            <div class="card-footer text-center">{{footer}}</div>
+        </div>
+
+    </div>
+
+    {{/each}}
+
+    {{/with}}
+
+    <hr />
+
+    {{#with proposition}}
+
+    <div class="display-2 text-light">{{title}}</div>
+
+    {{#each card}}
+
+    <div class="col-5">
+
+        <div class="card text-bg-warning text-light">
+
+            <div class="card-header">{{header}}</div>
+
+            <div class="card-body">
+
+                <div class="card-title">{{title}}</div>
+
+                <p>{{description}}</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    {{/each}}
+
+    {{/with}}
+
+    <hr />
+
+    {{#with footer}}
+
+    <h5>{{title}}</h5>
+
+    <div class="row col-4 gy-2">
+
+        {{#each navigation}}
+
+        <div class="col-12">
+
+            <div>
+
+                <a href="{{href}}">{{text}}</a>
+
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+    <div class="row col-4 gy-2">
+
+        {{#each socialMedia}}
+
+        <div class="col-12">
+
+            <div>
+
+                <button class="btn btn-outline-dark" link="{{link}}">{{name}}</button>
+
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+    <div class="row col-4 gy-2">
+
+        {{#each partners}}
+
+        <div class="col-12">
+
+            <div>
+
+                <button class="btn btn-outline-info" link="{{link}}">{{name}}</button>
+
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+    {{/with}}
+
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/task31.hbs
+Адже наш layout/task31.hbs має вже структуру HTML
+--}}
