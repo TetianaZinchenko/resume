@@ -1,0 +1,220 @@
+{{!--
+Це код container файлу для shophome сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/shophome"
+--}}
+
+<div class="row g-2">
+
+    {{#with navigation}}
+
+    <div class="card">
+        <div class="nav">
+
+            {{#each links}}
+
+            <div class="nav-item">
+                <a href="{{href}}" class="nav-link">{{text}}</a>
+            </div>
+
+            {{/each}}
+
+            <div class="nav-item">
+                <a href="#" class="nav-link disabled">FAQ</a>
+            </div>
+
+        </div>
+    </div>
+
+    {{/with}}
+
+    {{#with newsBlock}}
+
+    <h2 class="text-center">{{title}}</h2>
+
+    {{#each cards}}
+
+    <div class="col-3">
+
+        <div class="card text-bg-dark">
+
+            <div class="card-header">
+                {{title}}
+                {{#if isNew}}
+                <span class="badge text-bg-success rounded-pill">Нова</span>
+                {{/if}}
+
+                {{#if isTop}}
+                <span class="badge text-bg-danger rounded-pill">Топ</span>
+                {{/if}}
+            </div>
+
+            <div class="card-body">
+
+                <p>{{description}}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {{/each}}
+
+    {{/with}}
+
+    <hr class="mt-5" />
+
+    {{#with goodsBlock}}
+
+    <div class="row gy-5 mt-0">
+
+        <div class="nav nav-tabs">
+
+            {{#each tabs}}
+
+            {{#if isActive}}
+
+            <div class=" nav-item">
+                <a href="#" class="nav-link active">{{text}}</a>
+            </div>
+
+            {{else}}
+
+            {{#if isDisabled}}
+
+            <div class="nav-item">
+                <a href="#" class="nav-link disabled">{{text}}</a>
+            </div>
+
+            {{else}}
+
+            <div class="nav-item">
+                <a href="#" class="nav-link text-primary">{{text}}</a>
+            </div>
+
+            {{/if}}
+
+            {{/if}}
+
+            {{/each}}
+
+        </div>
+
+        {{#each cards}}
+
+        <div class="col-4">
+
+            <div class="card">
+
+                <img class="card-img-top" src="{{image}}" alt="{{title}}" />
+
+                <div class="card-body">
+
+                    <h6 class="card-title">
+
+                        {{title}}
+
+                        {{#if isNew}}
+
+                        <span class="badge text-uppercase text-bg-warning rounded-pill">Hot!</span>
+
+                        {{/if}}
+
+                        {{#if isNew}}
+
+                        <span class="badge text-bg-primary rounded-pill">Нове</span>
+
+                        {{/if}}
+
+                    </h6>
+
+                    <p>{{description}}</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+    {{/with}}
+
+    <hr class="my-5" />
+
+    {{#with subscribe}}
+
+    <div class="text-bg-dark p-2">
+
+        <h2>{{header}}</h2>
+
+        <p>{{description}}</p>
+
+        {{#each buttons}}
+
+        <div>
+
+            <button class="btn btn-primary m-2" link="{{link}}">{{text}}</button>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+    {{/with}}
+
+    <hr class="my-5" />
+
+    {{#with service}}
+
+    <div class="text-center text-bg-success p-2">
+
+        <h2>{{title}}</h2>
+
+        <p>{{description}}</p>
+
+        {{#each buttons}}
+
+        <div>
+
+            <button class="btn btn-primary" link="{{link}}">{{text}}</button>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+    {{/with}}
+
+    <hr class="mt-5 mb-3" />
+
+    <footer>
+        <div class="row">
+            {{#each footer}}
+            <div class="col-2">
+                {{#each this}}
+                {{#if @last}}
+                <div class="nav">
+                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                </div>
+                {{else}}
+                <div class="nav">
+                    <a href="{{link}}" class="nav-link">{{text}}</a>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </footer>
+
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/shop.hbs
+Адже наш layout/shop.hbs має вже структуру HTML
+--}}
