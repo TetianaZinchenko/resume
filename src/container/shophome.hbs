@@ -3,29 +3,36 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/shophome"
 --}}
 
-<div class="row g-2">
+<div class="row">
 
-    {{#with navigation}}
+    <header>
 
-    <div class="card">
-        <div class="nav">
 
-            {{#each links}}
+        {{!-- {{#with navigation}}
 
-            <div class="nav-item">
-                <a href="{{href}}" class="nav-link">{{text}}</a>
+        <div class="card">
+            <div class="nav">
+
+                {{#each links}}
+
+                <div class="nav-item">
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                </div>
+
+                {{/each}}
+
+                <div class="nav-item">
+                    <a href="#" class="nav-link disabled">FAQ</a>
+                </div>
+
             </div>
-
-            {{/each}}
-
-            <div class="nav-item">
-                <a href="#" class="nav-link disabled">FAQ</a>
-            </div>
-
         </div>
-    </div>
 
-    {{/with}}
+        {{/with}} --}}
+
+        {{> shopNav}}
+
+    </header>
 
     {{#with newsBlock}}
 
@@ -114,15 +121,15 @@
 
                         {{title}}
 
-                        {{#if isNew}}
+                        {{#if isHot}}
 
-                        <span class="badge text-uppercase text-bg-warning rounded-pill">Hot!</span>
+                        <span class="badge text-uppercase text-light text-bg-warning rounded-pill">Hot!</span>
 
                         {{/if}}
 
                         {{#if isNew}}
 
-                        <span class="badge text-bg-primary rounded-pill">Нове</span>
+                        <span class="badge text-bg-primary text-light rounded-pill">Нове</span>
 
                         {{/if}}
 
@@ -144,7 +151,7 @@
 
     <hr class="my-5" />
 
-    {{#with subscribe}}
+    {{!-- {{#with subscribe}}
 
     <div class="text-bg-dark p-2">
 
@@ -164,7 +171,9 @@
 
     </div>
 
-    {{/with}}
+    {{/with}} --}}
+
+    {{> shopSubscribe}}
 
     <hr class="my-5" />
 
@@ -190,6 +199,7 @@
 
     {{/with}}
 
+    {{!--
     <hr class="mt-5 mb-3" />
 
     <footer>
@@ -210,7 +220,7 @@
             </div>
             {{/each}}
         </div>
-    </footer>
+    </footer> --}}
 
 </div>
 
