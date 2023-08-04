@@ -1,0 +1,91 @@
+{{!-- <div class="row">
+
+    {{#each goodsBlock}}
+
+    <div class="card col-12 row">
+
+        <div class="col-2">
+            <img class="card-img-top" src="{{image}}" alt="{{name}}" />
+        </div>
+
+        <div class="card-body col-10 row">
+
+            <div class="col-6">
+                <h6 class="card-title">{{name}}</h6>
+                <p>{{description}}</p>
+            </div>
+
+            <div class="col-2">
+                <p>{{price.title}}: {{price.value}}</p>
+            </div>
+
+            <div class="col-2">
+                <p>{{amount}}</p>
+            </div>
+
+            <div class="col-2">
+
+                {{#each buttons}}
+
+                {{#if isPrimary}}
+
+                <button class="btn btn-primary">{{text}}</button>
+
+                {{/if}}
+
+                {{#if isDanger}}
+
+                <button class="btn btn-outline-danger">{{text}}</button>
+
+                {{/if}}
+
+                {{/each}}
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {{/each}}
+
+</div> --}}
+
+<div class="row">
+    {{#each goodsBlock}}
+    <div class="card col-12 py-3 mb-4">
+        <!-- Зробили картку шириною 100% на малих екранах, а на середніх та більших - половина екрану -->
+        <div class="row">
+            <div class="col-2">
+                <!-- Зробили зображення шириною 100% на малих екранах, а на середніх та більших - половина екрану -->
+                <img class="card-img-top" src="{{image}}" alt="{{name}}" />
+            </div>
+            <div class="card-body col-10">
+                <!-- Зробили текстовий блок шириною 100% на малих екранах, а на середніх та більших - половина екрану -->
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p>{{description}}</p>
+                    </div>
+                    <div class="col-2 mt-4">
+                        <p>{{price.title}}: {{price.value}}</p>
+                    </div>
+                    <div class="col-2 mt-4">
+                        <p>{{amount}}</p>
+                    </div>
+                    <div class="col-2">
+                        {{#each buttons}}
+                        {{#if isPrimary}}
+                        <button class="btn btn-primary mb-3">{{text}}</button>
+                        {{/if}}
+                        {{#if isDanger}}
+                        <button class="btn btn-outline-danger">{{text}}</button>
+                        {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
