@@ -1,0 +1,112 @@
+:root {
+  background: rgb(10, 10, 125);
+}
+
+html {
+  background: rgb(54, 54, 209);
+}
+
+body {
+  background: rgb(206, 206, 237);
+}
+
+* {
+  color: #350a77;
+}
+
+h1 {
+  color: green;
+}
+
+h2 {
+  color: chartreuse;
+}
+
+h2 {
+  color: blue;
+}
+
+.box {
+  background: #b8b1b1;
+}
+
+h3 {
+  color: chartreuse;
+}
+
+#user {
+  color: chartreuse;
+}
+
+h3#user,
+p,
+button {
+  color: deeppink;
+}
+
+.button {
+  background: red;
+  color: blue;
+}
+
+button.button {
+  background: rgb(255, 196, 0);
+  color: rgba(0, 0, 255, 0.337);
+}
+
+button.button#button {
+  background: rgb(0, 251, 255);
+}
+
+div > p {
+  color: rgb(227, 53, 53);
+}
+
+.box > p {
+  color: rgb(227, 53, 53);
+}
+
+#box > p {
+  color: rgb(223, 116, 193);
+}
+
+footer > .info {
+  color: rgb(31, 120, 37);
+}
+
+footer em {
+  color: rgb(84, 209, 93);
+}
+
+footer .child {
+  color: mediumvioletred;
+}
+
+footer div.child {
+  color: rgb(154, 199, 21);
+}
+
+footer em.child,
+footer div.child {
+  color: rgb(77, 81, 65);
+}
+
+h1 + p {
+  background: #350a77;
+}
+
+h1 + .test {
+  background: #339ccc;
+}
+
+h1 ~ p {
+  background: rgb(204, 255, 0);
+}
+
+h1 ~ div > p {
+  background: rgb(38, 255, 0);
+}
+
+h1 ~ * > p {
+  background: rgb(0, 255, 255);
+}
