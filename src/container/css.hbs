@@ -1,0 +1,117 @@
+{{!--
+Це код container файлу для css сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/css"
+--}}
+
+<main>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>CSS</mark></div>
+
+    <p>
+
+        Як можна підключати
+        CSS до коду HTML?
+
+    <pre>
+            1. Через окремий CSS файл
+            
+            2. Через тег &lt;style&gt;
+
+            3. Через атрибут style
+            
+            4. Через JavaScript
+    </pre>
+
+    <p>
+        Підключати CSS файли потрібно обов’язково у тег &lt;head&gt;
+    </p>
+
+    <p>
+        Властивості у підключених CSS файлах, додаються до тегів
+        відповідно до їх послідовності підключення в HTML файлі
+    </p>
+
+    <p>
+        Через тег
+    </p>
+
+    Для того, щоб додати CSS код до конкретного HTML документа,
+    потрібно писати CSS код в спеціальному тегу &lt;style&gt;
+
+    <pre>
+
+&lt;style&gt;
+    h1 {
+        color: red;
+    }
+&lt;/style&gt;
+
+</pre>
+
+    <p>
+        Через атрибут
+    </p>
+
+    Для того, щоб додати CSS код до конкретного тегу,
+    потрібно використовувати спеціальний атрибут style
+
+    <pre>
+
+&lt;div style=”color: blue;”&gt;
+    Текст з блакитним кольором
+&lt;/div&gt;
+
+</pre>
+
+    <p>
+        Normalize.css
+    </p>
+
+    <p>
+        Normalize.css — це файл CSS, який забезпечує
+        кросбраузерність стилів та видаляє непотрібні нативні стилі
+    </p>
+
+    <p>Також інколи такий CSS файл називають Reset.css</p>
+
+    <p>підключення</p>
+
+    <p>https://github.com/it-brains-ua/css</p>
+    <p>https://github.com/it-brains-ua/css/blob/master/public/css/normalize.css</p>
+    <p>https://raw.githubusercontent.com/it-brains-ua/css/master/public/css/normalize.css</p>
+
+    </p>
+
+
+    <h1>Hello, world!</h1>
+
+    {{> title data="My title"}}
+
+    <div style="color: red; background: black;">This is text</div>
+
+    <h1 style="color: black; background: yellow;">This is title</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/css.hbs
+Адже наш layout/css.hbs має вже структуру HTML
+--}}
