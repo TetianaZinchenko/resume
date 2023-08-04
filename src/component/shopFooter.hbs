@@ -1,0 +1,25 @@
+<div>
+
+    <hr class="mt-5 mb-3" />
+
+    <footer>
+        <div class="row">
+            {{#each footer}}
+            <div class="col-2">
+                {{#each this}}
+                {{#if @last}}
+                <div class="nav">
+                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                </div>
+                {{else}}
+                <div class="nav">
+                    <a href="{{link}}" class="nav-link">{{text}}</a>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </footer>
+
+</div>
