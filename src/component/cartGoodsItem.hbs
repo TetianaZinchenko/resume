@@ -54,23 +54,20 @@
 <div class="row">
     {{#each goodsBlock}}
     <div class="card col-12 py-3 mb-4">
-        <!-- Зробили картку шириною 100% на малих екранах, а на середніх та більших - половина екрану -->
         <div class="row">
-            <div class="col-2">
-                <!-- Зробили зображення шириною 100% на малих екранах, а на середніх та більших - половина екрану -->
+            <div class="col-2 d-flex align-items-center">
                 <img class="card-img-top" src="{{image}}" alt="{{name}}" />
             </div>
             <div class="card-body col-10">
-                <!-- Зробили текстовий блок шириною 100% на малих екранах, а на середніх та більших - половина екрану -->
-                <div class="row mt-5">
+                <div class="row mt-5 d-flex align-items-center">
                     <div class="col-6">
                         <h5 class="card-title">{{name}}</h5>
                         <p>{{description}}</p>
                     </div>
-                    <div class="col-2 mt-4">
+                    <div class="col-2">
                         <p>{{price.title}}: {{price.value}}</p>
                     </div>
-                    <div class="col-2 mt-4">
+                    <div class="col-2">
                         <p>{{amount}}</p>
                     </div>
                     <div class="col-2">
