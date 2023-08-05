@@ -1,0 +1,219 @@
+{{!--
+Це код container файлу для shopcatalog сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/shopcatalog"
+--}}
+
+<div class="row">
+    <header>
+
+        {{!-- {{#with navigation}}
+
+        <div class="card">
+            <div class="nav">
+
+                {{#each links}}
+
+                <div class="nav-item">
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                </div>
+
+                {{/each}}
+
+                <div class="nav-item">
+                    <a href="#" class="nav-link disabled">FAQ</a>
+                </div>
+
+            </div>
+        </div>
+
+        {{/with}} --}}
+
+        {{> shopNav}}
+
+    </header>
+
+    <div class="my-5">
+        <ol class="breadcrumb">
+
+            {{#each breadcrumb}}
+
+            <li class="breadcrumb-item">
+
+                {{#if url}}<a href="{{url}}">{{name}}</a>
+                {{else}}
+                <span>{{name}}</span>
+                {{/if}}
+
+            </li>
+
+            {{/each}}
+
+        </ol>
+    </div>
+
+    <h1>{{header}}</h1>
+
+    <div>
+
+        <form class="row mt-4 mb-5">
+            {{#each sortBlock}}
+            <div class="col-3">
+
+                <select class="form-select">
+                    <option value="" disabled selected>{{placeholder}}</option>
+                    {{#each options}}
+                    <option value="{{value}}">{{text}}</option>
+                    {{/each}}
+                </select>
+
+            </div>
+            {{/each}}
+        </form>
+
+    </div>
+
+    <div class="row g-2">
+
+        <div class="col-4">
+
+            <div class="card p-3">
+
+                {{#with filterBlock}}
+
+                <div>
+                    {{#with sellers}}
+
+                    <div class="form-label">{{title}}</div>
+
+                    {{#each list}}
+
+                    <div class="form-check">
+                        <label class="form-check-label">{{value}}</label>
+                        <input name="filter" type="checkbox" class="form-check-input" value="{{value}}" />
+                    </div>
+
+                    {{/each}}
+
+                    {{/with}}
+                </div>
+
+                <hr class="my-3" />
+
+                <div>
+                    {{#with brands}}
+
+                    <div class="form-label">{{title}}</div>
+
+                    {{#with input}}
+                    <input class="mb-2" placeholder="{{placeholder}}" />
+                    {{/with}}
+
+                    {{#each options}}
+
+                    <div class="form-check">
+                        <label class="form-check-label">{{value}}</label>
+                        <input name="filter" type="checkbox" class="form-check-input" value="{{value}}" />
+                    </div>
+
+                    {{/each}}
+
+                    {{/with}}
+                </div>
+
+                <hr class="my-3" />
+
+                <div>
+                    {{#with price}}
+
+                    <div class="form-label">{{title}}</div>
+
+                    {{#with range}}
+                    <div>
+                        <input class="mb-2" placeholder="{{from}}" />
+                    </div>
+                    <div>
+                        <input class="mb-2" placeholder="{{to}}" />
+                    </div>
+                    {{/with}}
+
+                    {{#with button}}
+
+                    <div>
+                        <button class="btn btn-outline-secondary" link="{{link}}">{{text}}</button>
+                    </div>
+
+                    {{/with}}
+
+                    {{/with}}
+                </div>
+
+                <hr class="my-3" />
+
+                {{#each filterList}}
+
+                <div class="form-label">{{title}}</div>
+
+                {{#each options}}
+
+                <div class="form-check">
+                    <label class="form-check-label">{{value}}</label>
+                    <input name="filter" type="checkbox" class="form-check-input" value="{{value}}" />
+                </div>
+
+                {{/each}}
+
+                {{#unless @last}}
+                <hr class="my-3" />
+                {{/unless}}
+
+                {{/each}}
+
+                {{/with}}
+
+            </div>
+
+        </div>
+
+        <div class="col-8 row g-2 mt-0">
+
+            {{> catalogItem}}
+
+        </div>
+
+    </div>
+
+    <div class="mt-5">
+        <section>
+            {{> shopServices}}
+        </section>
+    </div>
+
+    {{!--
+    <hr class="my-5" />
+
+    <footer>
+        <div class="row">
+            {{#each footer}}
+            <div class="col-2">
+                {{#each this}}
+                {{#if @last}}
+                <div class="nav">
+                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                </div>
+                {{else}}
+                <div class="nav">
+                    <a href="{{link}}" class="nav-link">{{text}}</a>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </footer> --}}
+
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/shop.hbs
+Адже наш layout/shop.hbs має вже структуру HTML
+--}}
