@@ -1,0 +1,246 @@
+{{!--
+Це код container файлу для shopcart сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/shopcart"
+--}}
+
+<div class="row">
+    <header>
+
+        {{!-- {{#with navigation}}
+
+        <div class="card">
+            <div class="nav">
+
+                {{#each links}}
+
+                <div class="nav-item">
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                </div>
+
+                {{/each}}
+
+                <div class="nav-item">
+                    <a href="#" class="nav-link disabled">FAQ</a>
+                </div>
+
+            </div>
+        </div>
+
+        {{/with}} --}}
+
+        {{> shopNav}}
+
+    </header>
+
+    <div class="row mt-5">
+
+        {{#with formBlock}}
+
+        <div class="col-8">
+
+            <section>
+
+                <h1>{{header}}</h1>
+
+                {{#with rating}}
+                <div class="my-3">{{title}}: {{value}}</div>
+                {{/with}}
+
+            </section>
+
+            <section>
+
+                {{#with actionBlock}}
+
+                <div class="nav nav-tabs">
+
+                    {{#each tabs}}
+
+                    {{#if isActive}}
+
+                    <div class=" nav-item">
+                        <a href="#" class="nav-link active">{{text}}</a>
+                    </div>
+
+                    {{else}}
+
+                    <div class="nav-item">
+                        <a href="#" class="nav-link text-primary">{{text}}</a>
+                    </div>
+
+                    {{/if}}
+
+                    {{/each}}
+
+                </div>
+
+                <hr class="my-5" />
+
+                {{#with report}}
+
+                <div class="card p-3">
+
+                    <div>{{title}}</div>
+
+                    {{#with button}}
+
+                    <div>
+                        <button class="btn btn-secondary mt-3" link="{{link}}">{{text}}</button>
+                    </div>
+
+                    {{/with}}
+
+                </div>
+
+                {{/with}}
+
+                {{/with}}
+
+            </section>
+
+            <hr class="my-5" />
+
+            <section>
+
+                {{#with feedbackBlock}}
+
+                <h2 class="mb-3 mb-5">{{title}}</h2>
+
+                {{#each buttons}}
+
+                {{#if isWarning}}
+
+                <button link="{{link}}" class="btn btn-warning me-2">{{text}}</button>
+
+                {{/if}}
+
+                {{#if isSuccess}}
+
+                <button link="{{link}}" class="btn btn-success me-2">{{text}}</button>
+
+                {{/if}}
+
+                {{#if isDanger}}
+
+                <button link="{{link}}" class="btn btn-danger">{{text}}</button>
+
+                {{/if}}
+
+                {{/each}}
+
+                {{/with}}
+
+            </section>
+
+        </div>
+
+        <div class="col-4">
+
+            <section>
+
+                {{#with goodsInfo}}
+
+                <div class="card">
+                    <img class="m-3" src="{{photo}}" alt="{{name}}" width="50%" />
+                    <h4 class="ms-3 mb-3">{{name}}</h4>
+                </div>
+
+                <div class="card my-3 p-3">
+                    <h4>{{price}}</h4>
+
+                    {{#if inMarket}}
+
+                    <div>Є в наявності</div>
+
+                    {{else}}
+
+                    <div>Немає в наявності</div>
+
+                    {{/if}}
+
+                    {{#each buttons}}
+
+                    {{#if isPrimary}}
+
+                    <div>
+                        <button link="{{link}}" class="btn btn-primary mt-3">{{text}}</button>
+                    </div>
+
+                    {{/if}}
+
+                    {{#if isSecondary}}
+
+                    <div>
+                        <button link="{{link}}" class="btn btn-secondary mt-3">{{text}}</button>
+                    </div>
+
+                    {{/if}}
+
+                    {{/each}}
+
+                </div>
+
+                <div class="card p-3">
+
+                    {{#with seller}}
+
+                    <div>{{title}}: {{value}}</div>
+
+                    {{/with}}
+
+                </div>
+
+                {{/with}}
+
+            </section>
+
+        </div>
+
+        {{/with}}
+
+    </div>
+
+    <hr class="my-5" />
+
+    <div>
+        <section>
+            {{> reviewItem}}
+        </section>
+    </div>
+
+    <div>
+        <section>
+            {{> shopServices}}
+        </section>
+    </div>
+
+
+    {{!--
+    <hr class="my-5" />
+
+    <footer>
+        <div class="row">
+            {{#each footer}}
+            <div class="col-2">
+                {{#each this}}
+                {{#if @last}}
+                <div class="nav">
+                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                </div>
+                {{else}}
+                <div class="nav">
+                    <a href="{{link}}" class="nav-link">{{text}}</a>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </footer> --}}
+
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/shop.hbs
+Адже наш layout/shop.hbs має вже структуру HTML
+--}}
