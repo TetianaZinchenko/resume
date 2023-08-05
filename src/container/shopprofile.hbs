@@ -1,6 +1,6 @@
 {{!--
-Це код container файлу для shoporder сторінки,
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/shoporder"
+Це код container файлу для shopprofile сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/shopprofile"
 --}}
 
 <div class="row m-0">
@@ -88,7 +88,7 @@
 
             <h4 class="mt-2 mb-3">{{title}}</h4>
 
-            <div class="card p-2">
+            <div class="card p-2 ps-0">
                 <div class="row m-0">
                     {{#with fullName}}
                     <div class="col-4">
@@ -162,19 +162,23 @@
 
             <h4 class="mb-3">{{title}}</h4>
 
-            <div class="row m-0">
+            <div class="row">
                 {{#each users}}
 
-                <div class="card col-4">
+                <div class="col-4">
 
-                    <div>{{name}}</div>
-                    <div>{{phone}}</div>
+                    <div class="card h-100 ps-2">
 
-                    {{#with button}}
-                    <div>
-                        <button class="btn btn-primary my-2" link="link">{{text}}</button>
+                        <div>{{name}}</div>
+                        <div>{{phone}}</div>
+
+                        {{#with button}}
+                        <div>
+                            <button class="btn btn-primary my-2" link="link">{{text}}</button>
+                        </div>
+                        {{/with}}
+
                     </div>
-                    {{/with}}
 
                 </div>
 
@@ -192,23 +196,27 @@
 
             <h4 class="mb-3">{{title}}</h4>
 
-            <div class="row m-0">
+            <div class="row">
                 {{#each contactData}}
 
-                <div class="card col-4">
+                <div class="col-4">
 
-                    <div>{{title}}</div>
-                    <div>{{value}}</div>
+                    <div class="card h-100 ps-2">
 
-                    {{#with button}}
+                        <div>{{title}}</div>
+                        <div>{{value}}</div>
 
-                    <div>
-                        <button
-                            class="my-2 btn {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-outline-secondary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}}"
-                            link="{{link}}">{{text}}</button>
+                        {{#with button}}
+
+                        <div>
+                            <button
+                                class="my-2 btn {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-outline-secondary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}}"
+                                link="{{link}}">{{text}}</button>
+                        </div>
+
+                        {{/with}}
+
                     </div>
-
-                    {{/with}}
 
                 </div>
 
