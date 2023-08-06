@@ -2,7 +2,6 @@
   "name": "resume",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://tetianazinchenko.github.io/resume/",
   "scripts": {
     "start": "node ./index.js",
     "dev": "nodemon -e js,hbs,json,css ./index.js",
