@@ -3,9 +3,9 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/mac"
 --}}
 
-<div>
+<div class="p-5">
 
-    <div>
+    <div class="mb-5">
         <h1>{{name}}</h1>
     </div>
 
@@ -21,287 +21,289 @@
         <p><b>Category: </b>{{category}}</p>
     </div>
 
+    <hr class="my-5" />
+
     {{> title data="Features:" big=false}}
 
     {{#with features}}
 
-    <br />
-    <hr />
-    <br />
+    <div class="row g-4">
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <div>
+                    <h5><b>Processor:</b></p>
+                </div>
 
-    <div>
-        <p><b><mark>Processor:</mark></b></p>
-    </div>
+                {{#with processor}}
 
-    {{#with processor}}
+                <div>
+                    <p><b>Brand: </b>{{brand}}</p>
+                </div>
 
-    <div>
-        <p><b>Brand: </b>{{brand}}</p>
-    </div>
+                <div>
+                    <p><b>Model: </b>{{model}}</p>
+                </div>
 
-    <div>
-        <p><b>Model: </b>{{model}}</p>
-    </div>
+                <div>
+                    <p><b>Speed: </b>{{speed}}</p>
+                </div>
 
-    <div>
-        <p><b>Speed: </b>{{speed}}</p>
-    </div>
+                <div>
+                    <p><b>Cores: </b><span class="badge text-bg-info">{{cores}}</span></p>
+                </div>
 
-    <div>
-        <p><b>Cores: </b><span class="badge text-bg-info">{{cores}}</span></p>
-    </div>
+                <div>
+                    <p><b>Cache: </b>{{cache}}</p>
+                </div>
 
-    <div>
-        <p><b>Cache: </b>{{cache}}</p>
-    </div>
-
-    {{/with}}
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Memory:</mark></b></p>
-    </div>
-
-    {{#with memory}}
-
-    <div>
-        <p><b>Type: </b>{{type}}</p>
-    </div>
-
-    <div>
-        <p><b>Size: </b>{{size}}</p>
-    </div>
-
-    <div>
-        <p><b>Speed: </b>{{speed}}</p>
-    </div>
-
-    {{/with}}
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Storage:</mark></b></p>
-    </div>
-
-    {{#with storage}}
-
-    <div>
-        <p><b>Type: </b>{{type}}</p>
-    </div>
-
-    <div>
-        <p><b>Size: </b>{{size}}</p>
-    </div>
-
-    {{/with}}
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Display:</mark></b></p>
-    </div>
-
-    {{#with display}}
-
-    <div>
-        <p><b>Size: </b>{{size}}</p>
-    </div>
-
-    <div>
-        <p><b>Resolution: </b>{{resolution}}</p>
-    </div>
-
-    <div>
-        <p><b>Technology: </b>{{technology}}</p>
-    </div>
-
-    <div>
-        <p><b>Color space: </b>{{color_space}}</p>
-    </div>
-
-    <div>
-        <p><b>Brightness: </b>{{brightness}}</p>
-    </div>
-
-    <div>
-        <p><b>Refresh rate: </b>{{refresh_rate}}</p>
-    </div>
-
-    {{/with}}
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Graphics:</mark></b></p>
-    </div>
-
-    {{#with graphics}}
-
-    <div>
-        <p><b>Brand: </b>{{brand}}</p>
-    </div>
-
-    <div>
-        <p><b>Model: </b>{{model}}</p>
-    </div>
-
-    <div>
-        <p><b>Memory: </b>{{memory}}</p>
-    </div>
-
-    {{/with}}
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Ports:</mark></b></p>
-    </div>
-
-    <ul>
-
-        {{#each ports}}
-
-        <br />
-
-        <li>
-
-            <div>
-                <p><b>Type: </b>{{type}}</p>
+                {{/with}}
             </div>
+        </div>
 
-            <div>
-                <p><b>Count: </b><span class="badge text-bg-info">{{count}}</span></p>
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <div>
+                    <h5><b>Memory:</b></p>
+                </div>
+
+                {{#with memory}}
+
+                <div>
+                    <p><b>Type: </b>{{type}}</p>
+                </div>
+
+                <div>
+                    <p><b>Size: </b>{{size}}</p>
+                </div>
+
+                <div>
+                    <p><b>Speed: </b>{{speed}}</p>
+                </div>
+
+                {{/with}}
             </div>
+        </div>
 
-            {{#if features}}
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <div>
+                    <h5><b>Storage:</b></p>
+                </div>
 
-            <div>
-                <p><b>Features:</b></p>
+                {{#with storage}}
+
+                <div>
+                    <p><b>Type: </b>{{type}}</p>
+                </div>
+
+                <div>
+                    <p><b>Size: </b>{{size}}</p>
+                </div>
+
+                {{/with}}
             </div>
+        </div>
 
-            <ul>
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <div>
+                    <h5><b>Display:</b></h5>
+                </div>
 
-                {{#each features}}
+                {{#with display}}
 
-                <li>
-                    {{this}}
-                </li>
+                <div>
+                    <p><b>Size: </b>{{size}}</p>
+                </div>
 
-                {{/each}}
+                <div>
+                    <p><b>Resolution: </b>{{resolution}}</p>
+                </div>
 
-            </ul>
+                <div>
+                    <p><b>Technology: </b>{{technology}}</p>
+                </div>
 
-            {{/if}}
+                <div>
+                    <p><b>Color space: </b>{{color_space}}</p>
+                </div>
 
-        </li>
+                <div>
+                    <p><b>Brightness: </b>{{brightness}}</p>
+                </div>
 
-        {{/each}}
+                <div>
+                    <p><b>Refresh rate: </b>{{refresh_rate}}</p>
+                </div>
 
-    </ul>
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Battery:</mark></b></p>
-    </div>
-
-    {{#with battery}}
-
-    <div>
-        <p><b>Type: </b>{{type}}</p>
-    </div>
-
-    <div>
-        <p><b>Capacity: </b>{{capacity}}</p>
-    </div>
-
-    <div>
-        <p><b>Life: </b>{{life}}</p>
-    </div>
-
-    {{/with}}
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Weight:</mark> </b>{{weight}}</p>
-    </div>
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Dimensions:</mark></b></p>
-    </div>
-
-    {{#with dimensions}}
-
-    <div>
-        <p><b>Height: </b>{{height}}</p>
-    </div>
-
-    <div>
-        <p><b>Width: </b>{{width}}</p>
-    </div>
-
-    <div>
-        <p><b>Depth: </b>{{depth}}</p>
-    </div>
-
-    {{/with}}
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Operating system:</mark> </b>{{operating_system}}</p>
-    </div>
-
-    <br />
-    <hr />
-    <br />
-
-    <div>
-        <p><b><mark>Accessories:</mark></b></p>
-    </div>
-
-    <ul>
-
-        {{#each accessories}}
-
-        <li>
-
-            <div>
-                <p><em>{{name}}</em></p>
+                {{/with}}
             </div>
+        </div>
 
-            <div>
-                <p><b>Price: </b><span class="badge text-bg-warning">{{price}}</span></p>
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <div>
+                    <h5><b>Graphics:</b></h5>
+                </div>
+
+                {{#with graphics}}
+
+                <div>
+                    <p><b>Brand: </b>{{brand}}</p>
+                </div>
+
+                <div>
+                    <p><b>Model: </b>{{model}}</p>
+                </div>
+
+                <div>
+                    <p><b>Memory: </b>{{memory}}</p>
+                </div>
+
+                {{/with}}
             </div>
+        </div>
 
-        </li>
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <div>
+                    <h5><b>Ports:</b></h5>
+                </div>
 
-        {{/each}}
+                <div class="row g-4">
 
-    </ul>
+                    {{#each ports}}
+
+                    <div class="col-12">
+                        <div class="card p-4">
+
+                            <div>
+                                <p><b>Type: </b>{{type}}</p>
+                            </div>
+
+                            <div>
+                                <p><b>Count: </b><span class="badge text-bg-info">{{count}}</span></p>
+                            </div>
+
+                            {{#if features}}
+
+                            <div>
+                                <p><b>Features:</b></p>
+                            </div>
+
+                            <ul>
+
+                                {{#each features}}
+
+                                <li>
+                                    {{this}}
+                                </li>
+
+                                {{/each}}
+
+                            </ul>
+
+                            {{/if}}
+
+                        </div>
+                    </div>
+
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <div>
+                    <h5><b>Battery:</b></p>
+                </div>
+
+                {{#with battery}}
+
+                <div>
+                    <p><b>Type: </b>{{type}}</p>
+                </div>
+
+                <div>
+                    <p><b>Capacity: </b>{{capacity}}</p>
+                </div>
+
+                <div>
+                    <p><b>Life: </b>{{life}}</p>
+                </div>
+
+                {{/with}}
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <h5><b>Weight: </b>{{weight}}</h5>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card h-100 p-3">
+
+                <div>
+                    <h5><b>Dimensions:</b></h5>
+                </div>
+
+                {{#with dimensions}}
+
+                <div>
+                    <p><b>Height: </b>{{height}}</p>
+                </div>
+
+                <div>
+                    <p><b>Width: </b>{{width}}</p>
+                </div>
+
+                <div>
+                    <p><b>Depth: </b>{{depth}}</p>
+                </div>
+
+                {{/with}}
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card h-100 p-3">
+                <h5><b>Operating system: </b>{{operating_system}}</h5>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card h-100 p-3">
+
+                <h5><b>Accessories:</b></h5>
+
+                <div class="row g-4">
+
+                    {{#each accessories}}
+
+                    <div class="col-12">
+                        <div class="card h-100 p-4">
+
+                            <div>
+                                <p><em>{{name}}</em></p>
+                            </div>
+
+                            <div>
+                                <p><b>Price: </b><span class="badge text-bg-warning">{{price}}</span></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     {{/with}}
 

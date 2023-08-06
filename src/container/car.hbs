@@ -3,13 +3,13 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/car"
 --}}
 
-<div>
+<div class="p-5">
     <div>
-        <br />
+
         <div>
             <h1>{{make}}</h1>
         </div>
-        <br />
+
 
         <div>
             <p><b>Model:</b> <span class="badge text-bg-warning">{{model}}</span></p>
@@ -23,26 +23,26 @@
             <p><b>Color:</b> <span class="badge text-bg-light">{{color}}</span></p>
         </div>
 
-        <br />
-        <hr />
-        <br />
 
-        <div>
-            {{> title data="Features:" big=false}}
-            {{#with features}}
+        <hr class="my-3" />
 
-            <div>
-                <div>
-                    <br />
+
+        {{> title data="Features:" big=false}}
+        {{#with features}}
+
+        <div class="row g-4">
+            <div class="col-4">
+                <div class="card h-100 p-4">
+
                     <div>
-                        <mark><b>Interior:</b></mark>
+                        <h4><b>Interior:</b></mark>
                     </div>
-                    <br />
+
                     {{#with interior}}
 
-                    <div>
+                    <div class="card p-4">
                         <div>
-                            <p><em>Seats:</em></p>
+                            <p><b>Seats:</b></p>
                         </div>
                         {{#with seats}}
                         <div>
@@ -60,9 +60,9 @@
                         {{/with}}
                     </div>
 
-                    <div>
+                    <div class="card p-4 my-3">
                         <div>
-                            <p><em>Dashboard:</em></p>
+                            <p><b>Dashboard:</b></p>
                         </div>
                         {{#with dashboard}}
                         <div>
@@ -93,9 +93,9 @@
                         {{/with}}
                     </div>
 
-                    <div>
+                    <div class="card p-4">
                         <div>
-                            <p><em>Audio:</em></p>
+                            <p><b>Audio:</b></p>
                         </div>
                         {{#with audio}}
                         <div>
@@ -118,137 +118,137 @@
                     {{/with}}
                 </div>
             </div>
+            <div class="col-4">
+                <div class="card h-100 p-4">
 
-            <div>
-                <br />
-                <div>
-                    <mark><b>Exterior:</b></mark>
-                </div>
-                <br />
-                {{#with exterior}}
+                    <div>
+                        <h4><b>Exterior:</b></mark>
+                    </div>
 
-                <div>
-                    <div>
-                        <p><em>Wheels:</em></p>
+                    {{#with exterior}}
+
+                    <div class="card p-4">
+                        <div>
+                            <p><b>Wheels:</b></p>
+                        </div>
+                        {{#with wheels}}
+                        <div>
+                            <p>Size: {{size}}</p>
+                        </div>
+                        <div>
+                            <p>Type: {{type}}</p>
+                        </div>
+                        <div>
+                            <p>Color: <span class="badge text-bg-light">{{color}}</span></p>
+                        </div>
+                        {{/with}}
                     </div>
-                    {{#with wheels}}
-                    <div>
-                        <p>Size: {{size}}</p>
+
+                    <div class="card p-4 my-3">
+                        <div>
+                            <p><b>Headlights:</b></p>
+                        </div>
+                        {{#with headlights}}
+                        <div>
+                            <p>Type: {{type}}</p>
+                        </div>
+                        <div>
+                            <p>Brightness: {{brightness}}</p>
+                        </div>
+                        <div>
+                            <p>Automatic: <span class="badge text-bg-info">{{automatic}}</span></p>
+                        </div>
+                        {{/with}}
                     </div>
-                    <div>
-                        <p>Type: {{type}}</p>
+
+                    <div class="card p-4">
+                        <div>
+                            <p><b>Sunroof:</b></p>
+                        </div>
+                        {{#with sunroof}}
+                        <div>
+                            <p>Type: {{type}}</p>
+                        </div>
+                        <div>
+                            <p>Size: {{size}}</p>
+                        </div>
+                        <div>
+                            <p>Automatic: <span class="badge text-bg-info">{{automatic}}</span></p>
+                        </div>
+                        {{/with}}
                     </div>
-                    <div>
-                        <p>Color: <span class="badge text-bg-light">{{color}}</span></p>
-                    </div>
+
                     {{/with}}
                 </div>
-
-                <div>
-                    <div>
-                        <p><em>Headlights:</em></p>
-                    </div>
-                    {{#with headlights}}
-                    <div>
-                        <p>Type: {{type}}</p>
-                    </div>
-                    <div>
-                        <p>Brightness: {{brightness}}</p>
-                    </div>
-                    <div>
-                        <p>Automatic: <span class="badge text-bg-info">{{automatic}}</span></p>
-                    </div>
-                    {{/with}}
-                </div>
-
-                <div>
-                    <div>
-                        <p><em>Sunroof:</em></p>
-                    </div>
-                    {{#with sunroof}}
-                    <div>
-                        <p>Type: {{type}}</p>
-                    </div>
-                    <div>
-                        <p>Size: {{size}}</p>
-                    </div>
-                    <div>
-                        <p>Automatic: <span class="badge text-bg-info">{{automatic}}</span></p>
-                    </div>
-                    {{/with}}
-                </div>
-
-                {{/with}}
             </div>
-        </div>
+            <div class="col-4">
+                <div class="card h-100 p-4">
 
-        <div>
-            <div>
-                <br />
-                <div>
-                    <mark><b>Safety:</b></mark>
-                </div>
-                <br />
-                {{#with safety}}
+                    <div>
+                        <h4><b>Safety:</b></h4>
+                    </div>
 
-                <div>
-                    <div>
-                        <p><em>Airbags:</em></p>
+                    {{#with safety}}
+
+                    <div class="card p-4 mb-3">
+                        <div>
+                            <p><b>Airbags:</b></p>
+                        </div>
+                        {{#with airbags}}
+                        <div>
+                            <p>Front: <span class="badge text-bg-primary">{{front}}</span></p>
+                        </div>
+                        <div>
+                            <p>Side: <span class="badge text-bg-primary">{{side}}</span></p>
+                        </div>
+                        <div>
+                            <p>Knee: <span class="badge text-bg-primary">{{knee}}</span></p>
+                        </div>
+                        <div>
+                            <p>Rear: <span class="badge text-bg-primary">{{rear}}</span></p>
+                        </div>
+                        {{/with}}
                     </div>
-                    {{#with airbags}}
-                    <div>
-                        <p>Front: <span class="badge text-bg-primary">{{front}}</span></p>
+
+                    <div class="card p-4">
+                        <div>
+                            <p><b>Assistance:</b></p>
+                        </div>
+                        {{#with assistance}}
+                        <div>
+                            <p>blind spot monitoring: <span class="badge text-bg-info">{{blind_spot_monitoring}}</span>
+                            </p>
+                        </div>
+                        <div>
+                            <p>rear cross traffic alert: <span
+                                    class="badge text-bg-info">{{rear_cross_traffic_alert}}</span></p>
+                        </div>
+                        <div>
+                            <p>lane departure warning: <span
+                                    class="badge text-bg-info">{{lane_departure_warning}}</span>
+                            </p>
+                        </div>
+                        <div>
+                            <p>adaptive cruise control: <span
+                                    class="badge text-bg-info">{{adaptive_cruise_control}}</span>
+                            </p>
+                        </div>
+                        <div>
+                            <p>collision warning: <span class="badge text-bg-info">{{collision_warning}}</span>
+                            </p>
+                        </div>
+                        {{/with}}
                     </div>
-                    <div>
-                        <p>Side: <span class="badge text-bg-primary">{{side}}</span></p>
-                    </div>
-                    <div>
-                        <p>Knee: <span class="badge text-bg-primary">{{knee}}</span></p>
-                    </div>
-                    <div>
-                        <p>Rear: <span class="badge text-bg-primary">{{rear}}</span></p>
-                    </div>
+
                     {{/with}}
                 </div>
-
-                <div>
-                    <div>
-                        <p><em>Assistance:</em></p>
-                    </div>
-                    {{#with assistance}}
-                    <div>
-                        <p>blind spot monitoring: <span class="badge text-bg-info">{{blind_spot_monitoring}}</span>
-                        </p>
-                    </div>
-                    <div>
-                        <p>rear cross traffic alert: <span
-                                class="badge text-bg-info">{{rear_cross_traffic_alert}}</span></p>
-                    </div>
-                    <div>
-                        <p>lane departure warning: <span class="badge text-bg-info">{{lane_departure_warning}}</span>
-                        </p>
-                    </div>
-                    <div>
-                        <p>adaptive cruise control: <span class="badge text-bg-info">{{adaptive_cruise_control}}</span>
-                        </p>
-                    </div>
-                    <div>
-                        <p>collision warning: <span class="badge text-bg-info">{{collision_warning}}</span>
-                        </p>
-                    </div>
-                    {{/with}}
-                </div>
-
-                {{/with}}
             </div>
         </div>
 
         {{/with}}
     </div>
 
-    <br />
-    <hr />
-    <br />
+    <hr class="my-3" />
 
     <div>
         {{> title data="Engine:" big=false}}
@@ -281,9 +281,7 @@
         {{/with}}
     </div>
 
-    <br />
-    <hr />
-    <br />
+    <hr class="my-3" />
 
     <div>
         {{> title data="Fuel economy:" big=false}}
@@ -300,9 +298,7 @@
         {{/with}}
     </div>
 
-    <br />
-    <hr />
-    <br />
+    <hr class="my-3" />
 
     <div>
         {{> title data="Price:" big=false}}

@@ -3,69 +3,45 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/facebook"
 --}}
 
-<div>
+<div class="p-5">
 
-    <div>
+    <div class="mb-5">
         <h1>{{name}}</h1>
     </div>
 
-    <ul>
+    <div class="row g-4">
 
         {{#each users}}
 
-        <li>
+        <div class="col-6">
+            <div class="card h-100 p-4">
 
-            <div>
-                <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
-            </div>
+                <div>
+                    <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
+                </div>
 
-            <div>
-                <p><b>name: </b>{{name}}</p>
-            </div>
+                <div>
+                    <p><b>name: </b>{{name}}</p>
+                </div>
 
-            <div>
-                <p><b>gender: </b>{{gender}}</p>
-            </div>
+                <div>
+                    <p><b>gender: </b>{{gender}}</p>
+                </div>
 
-            <div>
-                <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
-            </div>
+                <div>
+                    <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
+                </div>
 
-            <div>
-                <p><b><mark>Friends:</mark></b></p>
-            </div>
+                <div>
+                    <p><b><mark>Friends:</mark></b></p>
+                </div>
 
-            <ul>
+                <div class="row g-4">
 
-                {{#each friends}}
+                    {{#each friends}}
 
-                <li>
-
-                    <div>
-                        <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
-                    </div>
-
-                    <div>
-                        <p><b>name: </b>{{name}}</p>
-                    </div>
-
-                    <div>
-                        <p><b>gender: </b>{{gender}}</p>
-                    </div>
-
-                    <div>
-                        <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
-                    </div>
-
-                    <div>
-                        <p><em>Mutual friends:</em></p>
-                    </div>
-
-                    <ul>
-
-                        {{#each mutual_friends}}
-
-                        <li>
+                    <div class="col-12">
+                        <div class="card h-100 p-4">
 
                             <div>
                                 <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
@@ -83,59 +59,168 @@
                                 <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
                             </div>
 
-                            {{#if mutual_friends}}
-
                             <div>
                                 <p><em>Mutual friends:</em></p>
                             </div>
 
-                            <ul>
+                            <div class="row g-4">
 
                                 {{#each mutual_friends}}
 
-                                <li>
+                                <div class="col-6">
+                                    <div class="card h-100 p-4">
 
-                                    <div>
-                                        <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
+                                        <div>
+                                            <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>name: </b>{{name}}</p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>gender: </b>{{gender}}</p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
+                                        </div>
+
+                                        {{#if mutual_friends}}
+
+                                        <div>
+                                            <p><em>Mutual friends:</em></p>
+                                        </div>
+
+                                        <div class="row g-4">
+
+                                            {{#each mutual_friends}}
+
+                                            <div class="col-12">
+                                                <div class="card h-100 p-4">
+
+                                                    <div>
+                                                        <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
+                                                    </div>
+
+                                                    <div>
+                                                        <p><b>name: </b>{{name}}</p>
+                                                    </div>
+
+                                                    <div>
+                                                        <p><b>gender: </b>{{gender}}</p>
+                                                    </div>
+
+                                                    <div>
+                                                        <p><b>age: </b><span class="badge text-bg-info">{{age}}</span>
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {{/each}}
+
+                                        </div>
+
+                                        {{/if}}
+
                                     </div>
-
-                                    <div>
-                                        <p><b>name: </b>{{name}}</p>
-                                    </div>
-
-                                    <div>
-                                        <p><b>gender: </b>{{gender}}</p>
-                                    </div>
-
-                                    <div>
-                                        <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
-                                    </div>
-
-                                </li>
+                                </div>
 
                                 {{/each}}
 
-                            </ul>
+                            </div>
+
+                            {{#if groups}}
+
+                            <div>
+                                <p><b>Groups:</b></p>
+                            </div>
+
+                            <div class="row g-4">
+
+                                {{#each groups}}
+
+                                <div class="col-6">
+                                    <div class="card h-100 p-4">
+
+                                        <div>
+                                            <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>name: </b>{{name}}</p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>description: </b>{{description}}</p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>members:</b></p>
+                                        </div>
+
+                                        <div class="row g-4">
+
+                                            {{#each members}}
+
+                                            <div class="col-12">
+                                                <div class="card h-100 p-4">
+
+                                                    <div>
+                                                        <p><b>id: </b><span class=" badge text-bg-info">{{id}}</span>
+                                                        </p>
+                                                    </div>
+
+                                                    <div>
+                                                        <p><b>name: </b>{{name}}</p>
+                                                    </div>
+
+                                                    <div>
+                                                        <p><b>gender: </b>{{gender}}</p>
+                                                    </div>
+
+                                                    <div>
+                                                        <p><b>age: </b><span class="badge text-bg-info">{{age}}</span>
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            {{/each}}
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                {{/each}}
+
+                            </div>
 
                             {{/if}}
 
-                        </li>
-
-                        {{/each}}
-
-                    </ul>
-
-                    {{#if groups}}
-
-                    <div>
-                        <p><b>Groups:</b></p>
+                        </div>
                     </div>
 
-                    <ul>
+                    {{/each}}
 
-                        {{#each groups}}
+                </div>
 
-                        <li>
+                {{#if groups}}
+
+                <div>
+                    <p><b><mark>Groups:</mark></b></p>
+                </div>
+
+                <div class="row g-4">
+
+                    {{#each groups}}
+
+                    <div class="col-12">
+                        <div class="card h-100 p-4">
 
                             <div>
                                 <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
@@ -153,121 +238,55 @@
                                 <p><b>members:</b></p>
                             </div>
 
-                            <ul>
+                            <div class="row g-4">
 
                                 {{#each members}}
 
-                                <li>
+                                <div class="col-6">
+                                    <div class="card h-100 p-4">
 
-                                    <div>
-                                        <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
+                                        <div>
+                                            <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>name: </b>{{name}}</p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>gender: </b>{{gender}}</p>
+                                        </div>
+
+                                        <div>
+                                            <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
+                                        </div>
+
                                     </div>
-
-                                    <div>
-                                        <p><b>name: </b>{{name}}</p>
-                                    </div>
-
-                                    <div>
-                                        <p><b>gender: </b>{{gender}}</p>
-                                    </div>
-
-                                    <div>
-                                        <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
-                                    </div>
-
-                                </li>
+                                </div>
 
                                 {{/each}}
 
-                            </ul>
+                            </div>
 
-                        </li>
+                        </div>
+                    </div>
 
-                        {{/each}}
+                    {{/each}}
 
-                    </ul>
+                </div>
 
-                    {{/if}}
+                {{/if}}
 
-                </li>
-
-                {{/each}}
-
-            </ul>
-
-            {{#if groups}}
-
-            <div>
-                <p><b><mark>Groups:</mark></b></p>
             </div>
-
-            <ul>
-
-                {{#each groups}}
-
-                <li>
-
-                    <div>
-                        <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
-                    </div>
-
-                    <div>
-                        <p><b>name: </b>{{name}}</p>
-                    </div>
-
-                    <div>
-                        <p><b>description: </b>{{description}}</p>
-                    </div>
-
-                    <div>
-                        <p><b>members:</b></p>
-                    </div>
-
-                    <ul>
-
-                        {{#each members}}
-
-                        <li>
-
-                            <div>
-                                <p><b>id: </b><span class="badge text-bg-info">{{id}}</span></p>
-                            </div>
-
-                            <div>
-                                <p><b>name: </b>{{name}}</p>
-                            </div>
-
-                            <div>
-                                <p><b>gender: </b>{{gender}}</p>
-                            </div>
-
-                            <div>
-                                <p><b>age: </b><span class="badge text-bg-info">{{age}}</span></p>
-                            </div>
-
-                        </li>
-
-                        {{/each}}
-
-                    </ul>
-
-                </li>
-
-                {{/each}}
-
-            </ul>
-
-            {{/if}}
-
-        </li>
+        </div>
 
         {{/each}}
 
-    </ul>
+        </d>
 
-</div>
+    </div>
 
-{{!--
-Цей код містить лише те, що буде виводитись в {{{body}}} в layout/facebook.hbs
-Адже наш layout/facebook.hbs має вже структуру HTML
---}}
+    {{!--
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/facebook.hbs
+    Адже наш layout/facebook.hbs має вже структуру HTML
+    --}}

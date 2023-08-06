@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+{{!-- <div>
     {{#with main}}
     <main>
         <section class="mb-5">
@@ -27,6 +27,52 @@
             </div>
         </section>
         {{/with}}
+    </main>
+    {{/with}}
+</div> --}}
+
+<div>
+    {{#with main}}
+    <main class="row h-100">
+
+        <div class="col-6">
+
+            <section class="card h-100 mb-5 p-4">
+
+                {{#with summary}}
+
+                {{> title data=title big=true}}
+
+                <div>
+                    <p>
+                        {{text}}
+                    </p>
+                </div>
+
+                {{/with}}
+
+            </section>
+
+        </div>
+
+        <div class="col-6">
+
+            <section class="card h-100 p-4">
+                {{#with experience}}
+
+                {{> title data=title big=false}}
+
+                <div>
+                    <p>
+                        {{text}}
+                    </p>
+                </div>
+
+                {{/with}}
+            </section>
+
+        </div>
+
     </main>
     {{/with}}
 </div>
