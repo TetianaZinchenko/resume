@@ -3,12 +3,15 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/bio"
 --}}
 
-<div>
-    <div>
+<div class="p-5">
+    <div class="mb-4">
         <h1>{{name}}</h1>
     </div>
-    <hr />
     <div>
+        (<b>{{birthdate}}</b>, {{birthplace}} - <b>{{deathdate}}</b>, {{deathplace}})
+    </div>
+    <hr class="my-5" />
+    {{!-- <div>
         <p><b>Birth date:</b> {{birthdate}}</p>
     </div>
     <div>
@@ -19,14 +22,14 @@
     </div>
     <div>
         <p><b>Death place:</b> {{deathplace}}</p>
-    </div>
+    </div> --}}
     <div>
         <p><b>Nationalitye:</b> {{nationality}}</p>
     </div>
     <div>
         <p><b>Occupation:</b> {{occupation}}</p>
     </div>
-    <br />
+    <hr class="my-5" />
     <div>
         <b>Known for:</b>
     </div>
@@ -35,141 +38,140 @@
         <li>{{this}}</li>
         {{/each}}
     </ul>
-    <br />
-    <hr />
+    <hr class="my-5" />
     <section>
         {{> title data="Education:" big=true}}
-        <ul>
+        <div class="row g-4">
             {{#each education}}
-            <li>
-                <div>
-                    <b>Degree: {{degree}}</b>
+            <div class="col-4">
+                <div class="card h-100 p-4">
+                    <div class="mb-4">
+                        <b>Degree: {{degree}}</b>
+                    </div>
+                    <div>
+                        <em>Field: {{field}}</em>
+                    </div>
+                    <div>
+                        <p>Institution: {{institution}}</p>
+                    </div>
+                    <div>
+                        <div>Year: {{year}}</div>
+                    </div>
                 </div>
-                <br />
-                <div>
-                    <em>Field: {{field}}</em>
-                </div>
-                <div>
-                    <p>Institution: {{institution}}</p>
-                </div>
-                <div>
-                    <p>Year: {{year}}</p>
-                </div>
-            </li>
+            </div>
             {{/each}}
-        </ul>
+        </div>
     </section>
-    <br />
-    <hr />
+    <hr class="my-5" />
     <section>
         {{> title data="Notable publications:" big=true}}
-        <ul>
+        <div class="row g-4">
             {{#each notable_publications}}
-            <li>
-                <div>
-                    <b>{{title}}</b>
+            <div class="col-4">
+                <div class="card h-100 p-4">
+                    <div>
+                        <b>{{title}}</b>
+                    </div>
+                    <div>
+                        <p>Year: {{year}}</p>
+                    </div>
+                    <div>
+                        <div>Publisher: {{publisher}}</div>
+                    </div>
                 </div>
-                <div>
-                    <p>Year: {{year}}</p>
-                </div>
-                <div>
-                    <p>Publisher: {{publisher}}</p>
-                </div>
-            </li>
+            </div>
             {{/each}}
-        </ul>
+        </div>
     </section>
-    <br />
-    <hr />
+    <hr class="my-5" />
     <section>
         {{> title data="Partners:" big=true}}
-        <ul>
+        <div class="row g-4">
             {{#each partners}}
-            <li>
-                <div>
-                    <b>{{name}}</b>
+            <div class="col-4">
+                <div class="card h-100 p-4">
+                    <div>
+                        <b>{{name}}</b>
+                    </div>
+                    <div>
+                        <em>Relationship: {{relationship}}</em>
+                    </div>
+                    <div>
+                        <div>Years: {{years}}</div>
+                    </div>
                 </div>
-                <br />
-                <div>
-                    <em>Relationship: {{relationship}}</em>
-                </div>
-                <div>
-                    <p>Years: {{years}}</p>
-                </div>
-            </li>
+            </div>
             {{/each}}
-        </ul>
+        </div>
     </section>
-    <br />
-    <hr />
+    <hr class="my-5" />
     <section>
         {{> title data="Awards:" big=true}}
-        <ul>
+        <div class="row g-4">
             {{#each awards}}
-            <li>
-                <div>
-                    <b>{{title}}</b>
+            <div class="col-4">
+                <div class="card h-100 p-4">
+                    <div>
+                        <b>{{title}}</b>
+                    </div>
+                    <div>
+                        <p>Year: {{year}}</p>
+                    </div>
+                    <div>
+                        <p>{{description}}</p>
+                    </div>
                 </div>
-                <div>
-                    <p>Year: {{year}}</p>
-                </div>
-                <div>
-                    <p>{{description}}</p>
-                </div>
-            </li>
+            </div>
             {{/each}}
-        </ul>
+        </div>
     </section>
-    <hr />
+    <hr class="my-5" />
     {{> title data="Influences:" big=true}}
     <ul>
         {{#each influences}}
         <li>{{this}}</li>
         {{/each}}
     </ul>
-    <br />
-    <hr />
+    <hr class="my-5" />
     {{> title data="Influenced:" big=true}}
     <ul>
         {{#each influenced}}
         <li>{{this}}</li>
         {{/each}}
     </ul>
-    <br />
-    <hr />
+    <hr class="my-5" />
     {{> title data="Quotes:" big=true}}
+
     {{#each quotes}}
-    <div>
+    <div class="card my-2 p-2">
         <q>{{this}}</q>
     </div>
     {{/each}}
-    <br />
-    <br />
-    <hr />
+
+    <hr class="my-5" />
     <section>
-        {{> title data="Major discoverie:" big=true}}
-        <ul>
-            {{#each major_discoverie}}
-            <li>
-                <div>
-                    <b>{{title}}</b>
+        {{> title data="Major discoveries:" big=true}}
+        <div class="row g-4">
+            {{#each major_discoveries}}
+            <div class="col-6">
+                <div class="card h-100 p-4">
+                    <div>
+                        <b>{{title}}</b>
+                    </div>
+                    <div>
+                        <p>Year: {{year}}</p>
+                    </div>
+                    <div>
+                        <p>{{description}}</p>
+                    </div>
                 </div>
-                <br />
-                <div>
-                    <p>Year: {{year}}</p>
-                </div>
-                <div>
-                    <p>{{description}}</p>
-                </div>
-            </li>
+            </div>
             {{/each}}
-        </ul>
-    </section>
-    <div>
-        <div>
-            <b>Contributions:</b>
         </div>
-        <br />
+    </section>
+    <hr class="my-5" />
+    <section>
+        {{> title data="Contributions:" big=true}}
         {{#with contributions}}
         <div>
             <em>{{title}}</em>
@@ -184,7 +186,7 @@
             <p>Field: {{field}}</p>
         </div>
         {{/with}}
-    </div>
+    </section>
 </div>
 
 {{!--

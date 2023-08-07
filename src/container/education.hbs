@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/educations"
 --}}
 
-<div>
+{{!-- <div>
     {{#with main}}
     <main>
         <section>
@@ -11,6 +11,35 @@
             <ul class="ps-5">
                 {{#each educations}}
                 <li>{{name}} {{#unless isEnd}} (ще навчаюсь) {{/unless}}</li>
+                {{/each}}
+            </ul>
+        </section>
+
+        <section>
+            {{> title data="My certificates" big=false}}
+            <ul class="ps-5">
+                {{#each certificates}}
+                <li>{{name}} ({{id}})</li>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+    {{/with}}
+</div> --}}
+
+<div>
+    {{#with main}}
+    <main>
+        <section>
+            {{> title data="My education" big=true}}
+            <ul class="ps-5">
+                {{#each educations}}
+                <li>{{name}} {{#unless isEnd}}
+                    <span class="badge text-uppercase text-light text-bg-warning rounded-pill mb-3">ще навчаюсь</span>
+                    {{else}}
+                    <span class="badge text-uppercase text-light text-bg-success rounded-pill mb-3">завершено</span>
+                    {{/unless}}
+                </li>
                 {{/each}}
             </ul>
         </section>

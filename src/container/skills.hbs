@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+{{!-- <div>
     {{#with main}}
     <main>
         <section>
@@ -20,6 +20,54 @@
 
                     {{#unless point}}
                     {{#if point includeZero=true}} (зараз вивчаємо) {{/if}}
+                    {{/unless}}
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+        <section>
+            {{> title data="My hobbies" big=false}}
+            <ol>
+                {{#each hobbies}}
+                <li>
+                    {{name}}
+
+                    {{#if isMain}} (favourite) {{/if}}
+                </li>
+                {{/each}}
+            </ol>
+        </section>
+    </main>
+    {{/with}}
+</div> --}}
+
+<div>
+    {{#with main}}
+    <main>
+        <section>
+            {{> title data="All skills" big=true}}
+            <ul>
+                {{#each skills}}
+                <li>
+                    {{name}}
+
+                    {{#if point includeZero=true}}
+                    <span class="badge text-uppercase text-light text-bg-success rounded-pill mb-3">{{point}}</span>
+                    {{/if}}
+                    {{#if isTop}}
+                    <span class="badge text-uppercase text-light text-bg-primary rounded-pill mb-3">Top!</span>
+                    {{/if}}
+
+                    {{#unless point includeZero=true}}
+                    <span class="badge text-uppercase text-light text-bg-danger rounded-pill mb-3">не
+                        вивчаємо</span>
+                    {{/unless}}
+
+                    {{#unless point}}
+                    {{#if point includeZero=true}}
+                    <span class="badge text-uppercase text-light text-bg-warning rounded-pill mb-3">зараз
+                        вивчаємо</span>
+                    {{/if}}
                     {{/unless}}
                 </li>
                 {{/each}}

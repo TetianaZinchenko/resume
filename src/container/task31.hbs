@@ -3,11 +3,11 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/task31"
 --}}
 
-<div class="row gx-2 gy-4">
+<div class="row gx-2 gy-4 p-5">
 
     {{#with navigation}}
 
-    {{#each links}}
+    {{!-- {{#each links}}
 
     <div class="col-2">
 
@@ -15,7 +15,25 @@
 
     </div>
 
-    {{/each}}
+    {{/each}} --}}
+
+    <div class="card">
+        <div class="nav">
+
+            {{#each links}}
+
+            <div class="nav-item col-2">
+
+                <div class="nav-item">
+                    {{> linkDefault text=text href=href class="nav-link"}}
+                </div>
+
+            </div>
+
+            {{/each}}
+
+        </div>
+    </div>
 
     {{#with button}}
 
@@ -57,7 +75,7 @@
 
     <div class="col-5">
 
-        <div class="card">
+        <div class="card h-100">
 
             {{#with picture}}
 
@@ -177,9 +195,9 @@
 
     {{#each cards}}
 
-    <div class="col-6">
+    <div class="col-5">
 
-        <div class="card text-bg-secondary">
+        <div class="card h-100 text-bg-secondary">
 
             <div class="card-header">{{header}}</div>
 
@@ -231,7 +249,7 @@
 
     {{#with proposition}}
 
-    <div class="display-2 text-light">{{title}}</div>
+    <div class="display-2">{{title}}</div>
 
     {{#each card}}
 
@@ -268,9 +286,9 @@
 
         <div class="col-12">
 
-            <div>
+            <div class="nav">
 
-                <a href="{{href}}">{{text}}</a>
+                <a class="nav-link" href="{{href}}">{{text}}</a>
 
             </div>
 

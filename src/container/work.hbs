@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/work"
 --}}
 
-<div>
+{{!-- <div>
     {{#with main}}
     <main>
         <section>
@@ -80,6 +80,86 @@
                     {{/each}}
                 </ul>
             </div>
+        </section>
+    </main>
+    {{/with}}
+</div> --}}
+
+<div>
+    {{#with main}}
+    <main>
+        <section>
+            {{> title data="Work history" big=true}}
+
+            <div class="row g-4">
+
+                {{#each works}}
+                <div class="col-6">
+                    <div class="card h-100 p-3">
+                        <div class="mb-4"><b>{{position}}</b></div>
+
+                        <div>
+                            {{#with duration}}
+                            {{from}} -
+                            {{#if to}}
+                            {{to}}
+                            {{else}} (досі працюємо)
+                            {{/if}}
+                            {{/with}}
+                        </div>
+
+                        <div class="my-3">
+                            {{#with company}}
+                            {{#if url}}
+                            {{> linkDefault text=name href=url}}
+                            {{else}}
+                            <b>{{name}}</b>
+                            {{/if}}
+                            {{/with}}
+                        </div>
+
+                        <div class="mb-3"><strong>Projects <span
+                                    class="badge text-light text-bg-primary rounded-pill mb-3">{{projectAmount}}</span></strong>
+                        </div>
+
+                        <div>
+                            {{#each projects}}
+                            <div>{{> link text=name href=url blank=true noLine=true}}</div>
+
+                            <div>
+                                <p>{{about}}</p>
+                            </div>
+
+                            <div class="card mb-3 p-2">
+                                <div><em>Project stacks </em><span
+                                        class="badge text-light text-bg-primary rounded-pill mb-3">{{stackAmount}}</span>
+                                </div>
+                                <div>
+                                    {{#each stacks}}
+                                    <div class="ms-3">{{name}}</div>
+                                    {{/each}}
+                                </div>
+                            </div>
+
+                            <div class="card p-2">
+                                <div><em>Project awards </em><span
+                                        class="badge text-light text-bg-primary rounded-pill mb-3">{{awardAmount}}</span>
+                                </div>
+                                <div>
+                                    {{#each awards}}
+                                    <div class="ms-3">{{name}}</div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+
+            </div>
+
         </section>
     </main>
     {{/with}}

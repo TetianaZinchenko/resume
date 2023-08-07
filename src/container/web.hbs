@@ -3,124 +3,144 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/web"
 --}}
 
-<div>
+<div class="p-5">
     {{#with web}}
     <div>
-        <div>
+        <div class="mb-5">
             <h1>Languages:</h1>
         </div>
 
+        <div class="row g-4">
+            {{#each languages}}
 
-        {{#each languages}}
-        <div>
+            <div class="col-6">
 
-            <div>
-                <p><b>{{name}}</b></p>
+                <div class="card h-100 p-4">
+
+                    <div>
+                        <h4 class="text-primary"><b>{{name}}</b></p>
+                    </div>
+
+                    <div>
+                        <p><b>Version:</b> <span
+                                class="badge text-light text-bg-primary rounded-pill mb-3">{{version}}</span></p>
+                    </div>
+
+                    <div>
+                        <p><b>Description:</b> {{description}}</p>
+                    </div>
+
+                    {{#if elements}}
+                    <div class="row g-4">
+                        {{#each elements}}
+                        <div class="col-6">
+                            <div class="card h-100 p-3">
+                                <div>
+                                    <h4><b><code>{{name}}</code></b></h4>
+                                </div>
+                                <div>
+                                    <p>Description: {{description}}</p>
+                                </div>
+                                <div>
+                                    <p><b>Attributes:</b></p>
+                                </div>
+                                <div class="row g-4">
+                                    {{#each attributes}}
+                                    <div class="col-12">
+                                        <div class="card h-100 p-3">
+                                            <div>
+                                                <p><em><code>{{name}}</code></em></p>
+                                            </div>
+                                            <div>
+                                                <div>Description: {{description}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+
+                    {{#if properties}}
+                    <div class="row g-4">
+                        {{#each properties}}
+                        <div class="col-6">
+                            <div class="card h-100 p-3">
+                                <div>
+                                    <h4><b><code>{{name}}</code></b></h4>
+                                </div>
+                                <div>
+                                    <p>Description: {{description}}</p>
+                                </div>
+                                <div>
+                                    <p><b>Values:</b></p>
+                                </div>
+                                <div class="row g-4">
+                                    {{#each values}}
+                                    <div class="col-12">
+                                        <div class="card h-100 p-3">
+                                            <div>
+                                                <p><em><code>Value: {{value}}</code></em></p>
+                                            </div>
+                                            <div>
+                                                <div>Description: {{description}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+
+                    {{#if functions}}
+                    <div class="row g-4">
+                        {{#each functions}}
+                        <div class="col-6">
+                            <div class="card h-100 p-3">
+                                <div>
+                                    <h4><b><code>{{name}}</code></b></h4>
+                                </div>
+                                <div>
+                                    <p>Description: {{description}}</p>
+                                </div>
+                                <div>
+                                    <p><b>Parameters:</b></p>
+                                </div>
+                                <div class="row g-4">
+                                    {{#each parameters}}
+                                    <div class="col-12">
+                                        <div class="card h-100 p-3">
+                                            <div>
+                                                <p><em>Name: <code>{{name}}</code></em></p>
+                                            </div>
+                                            <div>
+                                                <p><em>Type: <code>{{type}}</code></em></p>
+                                            </div>
+                                            <div>
+                                                <div>Description: {{description}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+
+                </div>
+
             </div>
 
-            <div>
-                <p><b>Version:</b> {{version}}</p>
-            </div>
-
-            <div>
-                <p><b>Description:</b> {{description}}</p>
-            </div>
-
-            {{#if elements}}
-            <ul>
-                {{#each elements}}
-                <li>
-                    <div>
-                        <mark><b><code>{{name}}</code></b></mark>
-                    </div>
-                    <div>
-                        <p>Description: {{description}}</p>
-                    </div>
-                    <div>
-                        <p>Attributes:</p>
-                    </div>
-                    <ul>
-                        {{#each attributes}}
-                        <li>
-                            <div>
-                                <p><em><code>{{name}}</code></em></p>
-                            </div>
-                            <div>
-                                <p>Description: {{description}}</p>
-                            </div>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </li>
-                {{/each}}
-            </ul>
-            {{/if}}
-
-            {{#if properties}}
-            <ul>
-                {{#each properties}}
-                <li>
-                    <div>
-                        <mark><b><code>{{name}}</code></b></mark>
-                    </div>
-                    <div>
-                        <p>Description: {{description}}</p>
-                    </div>
-                    <div>
-                        <p>Values:</p>
-                    </div>
-                    <ul>
-                        {{#each values}}
-                        <li>
-                            <div>
-                                <p><em>Value: {{value}}</em></p>
-                            </div>
-                            <div>
-                                <p>Description: {{description}}</p>
-                            </div>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </li>
-                {{/each}}
-            </ul>
-            {{/if}}
-
-            {{#if functions}}
-            <ul>
-                {{#each functions}}
-                <li>
-                    <div>
-                        <mark><b><code>{{name}}</code></b></mark>
-                    </div>
-                    <div>
-                        <p>Description: {{description}}</p>
-                    </div>
-                    <div>
-                        <p>Parameters:</p>
-                    </div>
-                    <ul>
-                        {{#each parameters}}
-                        <li>
-                            <div>
-                                <p><em>Name: {{name}}</em></p>
-                            </div>
-                            <div>
-                                <p><em>Type: {{type}}</em></p>
-                            </div>
-                            <div>
-                                <p>Description: {{description}}</p>
-                            </div>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </li>
-                {{/each}}
-            </ul>
-            {{/if}}
-
+            {{/each}}
         </div>
-        {{/each}}
 
     </div>
     {{/with}}

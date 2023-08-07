@@ -3,12 +3,12 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/task22"
 --}}
 
-<div>
+<div class="p-5">
 
     {{#with page_header}}
 
 
-    <h1 class="text-center">{{title}}</h1>
+    <h1 class="text-center mb-3">{{title}}</h1>
 
     <p class="text-uppercase text-center">{{description}}</p>
 
@@ -23,9 +23,7 @@
 
             {{#with title_list}}
 
-            <div class="display-6 text-end">{{main}}</div>
-
-            <br />
+            <div class="display-6 text-end mb-3">{{main}}</div>
 
             <h2 class="text-end">{{sub}}</h2>
 
@@ -33,7 +31,7 @@
 
             {{#with button}}
 
-            <button class="btn btn-outline-info">{{text}}</button>
+            <button class="btn btn-outline-info mt-3">{{text}}</button>
 
             {{/with}}
 
@@ -42,25 +40,19 @@
         </div>
     </div>
 
-    <br />
-
-    <div class="card">
+    <div class="card my-3">
         <div class="card-body">
 
             {{#with advantage}}
 
-            <div class="display-5 text-secondary">{{title}}</div>
-
-            <br />
+            <div class="display-5 text-secondary mb-3">{{title}}</div>
 
             <div class="card">
                 <div class="card-body">
 
                     {{#with efficiency}}
 
-                    <div class="display-4 text-secondary">{{title}}</div>
-
-                    <br />
+                    <div class="display-4 text-secondary mb-3">{{title}}</div>
 
                     <h6>{{sub_title}}</h6>
 
@@ -73,16 +65,12 @@
                 </div>
             </div>
 
-            <br />
-
-            <div class="card">
+            <div class="card my-3">
                 <div class="card-body">
 
                     {{#with innovation}}
 
-                    <div class="display-4 text-secondary text-center">{{title}}</div>
-
-                    <br />
+                    <div class="display-4 text-secondary text-center mb-3">{{title}}</div>
 
                     <h6 class="text-center">{{sub_title}}</h6>
 
@@ -100,9 +88,7 @@
 
                     {{#with collaboration}}
 
-                    <div class="display-4 text-secondary text-end">{{title}}</div>
-
-                    <br />
+                    <div class="display-4 text-secondary text-end mb-3">{{title}}</div>
 
                     <h6 class="text-end">{{sub_title}}</h6>
 
@@ -120,16 +106,12 @@
         </div>
     </div>
 
-    <br />
-
     <div class="card">
         <div class="card-body">
 
             {{#with agreement}}
 
-            <div class="display-5">{{title}}</div>
-
-            <br />
+            <div class="display-5 mb-3">{{title}}</div>
 
             <div class="card">
                 <div class="card-body">
@@ -137,8 +119,6 @@
                     {{#with info}}
 
                     <h5>{{sub_title}}</h5>
-
-                    <br />
 
                     <div class="card">
                         <div class="card-body">
@@ -170,7 +150,6 @@
 
 </div>
 
-<br />
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/task22.hbs
 Адже наш layout/task22.hbs має вже структуру HTML
