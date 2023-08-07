@@ -4,6 +4,7 @@ const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const dotenv = require('dotenv')
+const cors = require('cors') // політика CORS
 
 dotenv.config()
 
@@ -24,6 +25,7 @@ app.engine(
 )
 
 app.use(logger('dev'))
+app.use(cors()) // політика CORS
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
