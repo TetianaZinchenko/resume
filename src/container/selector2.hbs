@@ -1,0 +1,566 @@
+{{!--
+Це код container файлу для selector2 сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/selector2"
+--}}
+
+<main>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>Селектори. 2 частина</mark></div>
+
+    <p>
+
+    <pre>
+
+    Селектор
+    першої дитини
+
+    Селектор першої дитини — це селектор, який вибирає перший
+    тег, якщо він є першою дитиною всередині батьківського тегу
+
+    &lt;ul&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;li&gt;Item 1&lt;/li&gt;
+
+    li:first-child {
+    color: blue;
+    }
+
+    :first-child
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Що таке селектор
+    псевдоклас?
+
+    Селектор псевдоклас — це ключове слово, додане до
+    звичайного селектора, яке визначає його особливий стан
+
+    Селектор псевдокласу додається через двокрапку (":")
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    останньої дитини
+
+    Селектор останньої дитини — це селектор, який вибирає останній
+    тег, якщо він є останньою дитиною всередині батьківського тегу
+
+    &lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;li&gt;Item 3&lt;/li&gt;
+
+    li:last-child {
+    color: blue;
+    }
+
+    :last-child
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    одиничної дитини
+
+    Селектор одиничної дитини — це селектор, який вибирає тег,
+    якщо він є єдиною дитиною всередині батьківського тегу, і після
+    нього більше не існує інших дитячих тегів
+
+    &lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;li&gt;Item 1&lt;/li&gt;
+
+    li:only-child {
+    color: blue;
+    }
+
+    :only-child
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    першого типу
+
+    Селектор першого типу — це селектор, який вибирає перший
+    елемент по заданому тегу серед своїх сусідських тегів
+
+    &lt;div&gt;
+    &lt;b&gt;First&lt;/b&gt;
+    &lt;p&gt;First&lt;/p&gt;
+    &lt;p&gt;Second&lt;/p&gt;
+    &lt;b&gt;Second&lt;/b&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;First&lt;/p&gt;
+
+    p:first-of-type {
+    color: blue;
+    }
+
+    :first-of-type
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    останього типу
+
+    Селектор останнього типу — це селектор, який вибирає останній
+    елемент по заданому тегу серед своїх сусідських тегів
+
+    &lt;div&gt;
+    &lt;b&gt;First&lt;/b&gt;
+    &lt;p&gt;First&lt;/p&gt;
+    &lt;p&gt;Second&lt;/p&gt;
+    &lt;b&gt;Second&lt;/b&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Second&lt;/p&gt;
+
+    p:last-of-type {
+    color: blue;
+    }
+
+    :last-of-type
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    одиничного типу
+
+    Селектор одиничного типу — це селектор, який вибирає елемент
+    по заданому тегу, якщо він є єдиним таким тегом серед сусідів
+
+    &lt;div&gt;
+    &lt;b&gt;First&lt;/b&gt;
+    &lt;p&gt;First&lt;/p&gt;
+    &lt;b&gt;Second&lt;/b&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;First&lt;/p&gt;
+
+    p:only-of-type {
+    color: blue;
+    }
+
+    :only-of-type
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    порядкової дитини
+
+    Селектор порядкової дитини — це селектор, який обирає
+    елементи на основі їхньої позиції в батьківському елементі
+
+    Для цього треба вказати індекс (n) серед його братів і сестер.
+
+    &lt;div&gt;
+    &lt;p&gt;1&lt;/p&gt;
+    &lt;p&gt;2&lt;/p&gt;
+    &lt;p&gt;3&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;2&lt;/p&gt;
+
+    p:nth-child(2) {
+    color: blue;
+    }
+
+    :nth-child(n)
+
+    Селектор
+    порядкової дитини
+
+    Що можна вписувати в index (n)
+
+    - числа (1, 2, 3) — обирають елементи,
+    які є першим, другим, третім тощо
+
+    - even — обирає парні елементи
+
+    - odd — обирає непарні елементи
+
+    - формули (3n+1) — обирає елементи по формулі,
+    в якій n — змінна з порядковим номером елемента
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор зворотної
+    порядкової дитини
+
+    Селектор зворотної порядкової дитини — це селектор, який
+    обирає елементи на основі їхньої позиції в батьківському
+    елементі, але підрахунок веде з кінця
+
+    Для цього треба вказати індекс ( ) серед його братів і сестер. n
+
+    &lt;div&gt;
+    &lt;p&gt;1&lt;/p&gt;
+    &lt;p&gt;2&lt;/p&gt;
+    &lt;p&gt;3&lt;/p&gt;
+    &lt;p&gt;4&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;2&lt;/p&gt;
+
+    p:nth-last-child(3) {
+    color: blue;
+    }
+
+    :nth-last-child(n)
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    порядкового типу
+
+    Селектор порядкового типу — це селектор, який обирає
+    елементи на основі їхньої позиції в батьківському елементі та
+    типу тегу по аналогії як інші селектори типу
+
+    Для цього треба вказати індекс (n) серед його братів і сестер,
+    які мають спільний тип тегу
+
+    &lt;div&gt;
+    &lt;p&gt;1&lt;/p&gt;
+    &lt;b&gt;2&lt;/b&gt;
+    &lt;p&gt;3&lt;/p&gt;
+    &lt;p&gt;4&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;3&lt;/p&gt;
+
+    p:nth-of-type(2) {
+    color: blue;
+    }
+
+    :nth-of-type(n)
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор зворотного
+    порядкового типу
+    
+    Селектор зворотного порядкового типу — це селектор, який
+    обирає елементи на основі їхньої позиції в батьківському
+    елементі та типу тегу, але підрахунок веде з кінця
+    
+    Для цього треба вказати індекс (n) серед його братів і сестер,
+    які мають спільний тип тегу
+   
+    &lt;div&gt;
+    &lt;p&gt;1&lt;/p&gt;
+    &lt;b&gt;2&lt;/b&gt;
+    &lt;p&gt;3&lt;/p&gt;
+    &lt;b&gt;4&lt;/b&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;1&lt;/p&gt;
+    
+    p:nth-last-of-type(2) {
+    color: blue;
+    }
+    
+    :nth-last-of-type(n)
+    
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    невідповідності
+    
+    Селектор невідповідності — це селектор, який обирає
+    елементи, які не відповідають вказаним селекторам
+    
+    Для цього треба вказати в (s) ті селектори,
+    які не повинні відповідати до елемента
+     
+    &lt;div&gt;
+    &lt;p&gt;1&lt;/p&gt;
+    &lt;p class="big"&gt;2&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;1&lt;/p&gt;
+    
+    p:not(.big) {
+    color: blue;
+    }
+    
+    :not(s)
+    
+        </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор пустого
+    контенту
+    
+    Селектор пустого контенту — це селектор, який обирає
+    елементи, які не мають всередині контенту чи тегів
+    
+    &lt;div&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;Text&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;&lt;/p&gt;
+    
+    p:empty {
+    color: blue;
+    }
+    
+    :empty
+    
+        </pre>
+
+    </p>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <div class="card p-5 m-5 card-dark">
+        <ul>
+            <div class="item">0</div>
+            <li class="item">1</li>
+            <li class="item">2</li>
+            <li class="item">3</li>
+            <li class="item">4</li>
+        </ul>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <ul>
+            <li class="item">1</li>
+            <li class="item">2</li>
+            <li class="item">3</li>
+            <li class="item">4</li>
+        </ul>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <ul>
+            <li class="item">1</li>
+            <div class="item">0</div>
+            <li class="item">2</li>
+            <li class="item">3</li>
+            <li class="item">4</li>
+        </ul>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <ul>
+            <li class="item">1</li>
+        </ul>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <ul>
+            <li class="item">1</li>
+        </ul>
+        <div class="item">0</div>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <div class="item">0</div>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <div class="item1">0</div>
+        <p class="item1">00</p>
+        <p class="item1">00</p>
+        <article class="item1">000</article>
+        <div class="item1">0</div>
+        <p class="item1">00</p>
+        <article class="item1">000</article>
+        <div class="item1">0</div>
+        <p class="item1">00</p>
+        <span class="item1">0000</span>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <div class="item2">0</div>
+        <p class="item2">00</p>
+        <p class="item2">00</p>
+        <article class="item2">000</article>
+        <div class="item2">0</div>
+        <p class="item2">00</p>
+        <article class="item2">000</article>
+        <div class="item2">0</div>
+        <p class="item2">00</p>
+        <span class="item2">0000</span>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <div class="item3">0</div>
+        <p class="item3">00</p>
+        <p class="item3">00</p>
+        <article class="item3">000</article>
+        <div class="item3">0</div>
+        <p class="item3">00</p>
+        <article class="item3">000</article>
+        <div class="item3">0</div>
+        <p class="item3">00</p>
+        <span class="item3">0000</span>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <div class="item4">0</div>
+        <p class="item4">00</p>
+        <p class="item4">00</p>
+        <article class="item4">000</article>
+        <div class="item4">0</div>
+        <p class="item4">00</p>
+        <article class="item4">000</article>
+        <div class="item4">0</div>
+        <p class="item4">00</p>
+        <span class="item4">0000</span>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <div class="item5">0</div>
+        <p class="item5">00</p>
+        <p class="item5">00</p>
+        <article class="item5">000</article>
+        <div class="item5">0</div>
+        <p class="item5">00</p>
+        <article class="item5">000</article>
+        <div class="item5">0</div>
+        <p class="item5">00</p>
+        <span class="item5">0000</span>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <div class="item6">0</div>
+        <p class="item6">00</p>
+        <p class="item6">00</p>
+        <article class="item6">000</article>
+        <div class="item6">0</div>
+        <p class="item6"></p>
+        <article class="item6">000</article>
+        <div class="item6">0</div>
+        <p class="item6">00</p>
+        <span class="item6">0000</span>
+        <span class="item6">0000</span>
+        <span>0000</span>
+        <strong class="item6">00000p</strong>
+        <strong class="item6">00000</strong>
+        <strong class="item6">00000</strong>
+    </div>

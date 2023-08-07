@@ -1,0 +1,87 @@
+.card-dark {
+  background: #ffffffb8;
+}
+
+.item {
+  color: green;
+}
+
+.item:first-child {
+  color: blue;
+}
+
+.item:last-child {
+  color: red;
+}
+
+.item:only-child {
+  color: rebeccapurple;
+}
+
+li:only-child {
+  color: rgb(224, 53, 181);
+}
+
+.item1:first-of-type {
+  color: orange;
+}
+
+.item1:last-of-type {
+  color: rgb(17, 255, 0);
+}
+
+.item1:only-of-type {
+  color: rgb(0, 255, 255);
+}
+
+.item2:nth-child(4) {
+  color: orangered;
+}
+
+div:nth-child(2) {
+  color: rgb(163, 94, 69);
+}
+
+.item3:nth-child(even) {
+  color: rgb(225, 255, 0);
+}
+
+.item3:nth-child(odd) {
+  color: rgb(0, 255, 238);
+}
+
+.item4:nth-child(3n + 1) {
+  color: rgb(33, 98, 17);
+}
+
+.item4:nth-child(3n) {
+  color: rgb(176, 59, 151);
+}
+.item4:nth-child(3n - 2) {
+  color: rgb(196, 223, 18);
+}
+
+.item5:nth-last-child(5) {
+  color: rgb(73, 212, 117);
+}
+
+.item5:nth-of-type(2) {
+  color: rgb(91, 10, 62);
+}
+
+.item5:nth-last-of-type(3) {
+  color: rgb(139, 9, 13);
+}
+
+span:not(.item6) {
+  color: rgb(171, 46, 75);
+}
+
+.item6:not(span) {
+  color: rgb(64, 98, 35);
+}
+
+p:empty {
+  height: 10px;
+  background: rgba(242, 255, 0, 0.889);
+}
