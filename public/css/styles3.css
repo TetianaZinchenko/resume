@@ -1,0 +1,76 @@
+.card-dark {
+  background: #aaa4a4;
+}
+
+.input-dark {
+  background: #716b6b;
+}
+
+.input-dark[required] {
+  background: #db5c5c;
+}
+
+.input-dark[type='number'] {
+  background: #54b73c;
+}
+
+.small-img[alt~='small'] {
+  height: 500px;
+}
+
+.card[class~='img'] {
+  height: 300px;
+}
+
+.card.img {
+  height: 400px;
+}
+
+a[rel~='external'] {
+  color: green;
+}
+
+button[class|='btn'] {
+  background: red;
+}
+
+a[class^='btn'] {
+  background: rgb(255, 234, 0);
+}
+
+a[class*='btn'] {
+  background: rgb(26, 255, 0);
+}
+
+a[class$='info'] {
+  background: rgb(0, 187, 255);
+}
+
+.btn::first-letter {
+  color: rebeccapurple;
+}
+
+.big-text::first-line {
+  color: royalblue;
+}
+
+.input-dark-big::placeholder {
+  color: orange;
+  background: rgb(201, 225, 234);
+}
+
+.text-before::before {
+  content: '$$$';
+  color: rgb(255, 0, 183);
+}
+
+.text-after::after {
+  content: '$$$';
+  color: rgb(255, 0, 25);
+}
+
+.text-before-after::before,
+.text-before-after::after {
+  content: '$$$';
+  color: rgb(0, 255, 47);
+}

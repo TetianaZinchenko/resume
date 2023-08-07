@@ -1,0 +1,474 @@
+{{!--
+Це код container файлу для selector3 сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/selector3"
+--}}
+
+<main>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>Селектори. 3 частина</mark></div>
+
+    <p>
+
+    <pre>
+
+    Селектор атрибутів — це тип селекторів, який дозволяє
+    вибирати елементи на основі їх атрибутів так їх значень
+    
+    Селектор атрибута додається через квадратні дужки ("[]"),
+    всередині яких вказується селектор атрибута
+    
+    a[href] {
+    color: red;
+    }
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    назви атрибута
+
+    Селектор назви атрибута — це селектор, який вибирає тег,
+    якщо він має вказаний атрибут
+
+    a[href] {
+    color: blue;
+    }
+
+    [atr] atr це атрибут
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    значення атрибута
+    
+    Селектор значення атрибута — це селектор, який вибирає тег,
+    якщо він має вказаний атрибут з вказаним значенням
+    
+    input[type="number"] {
+    color: blue;
+    }
+    
+    [atr="value"]
+    atr — це атрибут
+    value — це значення
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор наявності
+    значення атрибута
+    
+    Селектор наявності значення атрибута — це селектор, який
+    вибирає тег, якщо він має вказаний атрибут, в якому можуть
+    перебувати декілька значень, одне з яких є вказаним значенням
+    
+    img[title~="flower"] {
+    background: blue;
+    }
+    
+    [atr~="value"]
+    atr — це атрибут
+    value — це значення
+    
+    &lt;img src="klematis.jpg" title="klematis small flower"&gt;
+
+    flower
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор префіксу
+    значення атрибута
+
+    Селектор префіксу значення атрибута — це селектор, який
+    вибирає тег, якщо він має вказаний атрибут, значення якого
+
+    єдине та починається з вказаного value або з value-
+
+    div[class|="btn"] {
+    background: blue;
+    }
+
+    [atr|="value"]
+    atr — це атрибут
+    value — це значення
+
+    &lt;div class="btn"&gt;&lt;/div&gt;
+    &lt;div class="btn-primary"&gt;&lt;/div&gt;
+    &lt;div class="my-button"&gt;&lt;/div&gt;
+    &lt;div class="btn btn-primary"&gt;&lt;/div&gt;
+
+    btn
+    btn-primary
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор початку
+    значення атрибута
+
+    Селектор початку значення атрибута — це селектор,
+    який вибирає тег, якщо він має вказаний атрибут,
+    значення якого починається з вказаного value
+
+    div[class^="btn"] {
+    background: blue;
+    }
+
+    [atr^="value"]
+    atr — це атрибут
+    value — це значення
+
+    &lt;div class="btn"&gt;&lt;/div&gt;
+    &lt;div class="btn-info"&gt;&lt;/div&gt;
+    &lt;div class="card btn"&gt;&lt;/div&gt;
+    &lt;div class="b-btn"&gt;&lt;/div&gt;
+
+    btn
+    btn-info
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор кореня
+    значення атрибута
+
+    Селектор кореня значення атрибута — це селектор,
+    який вибирає тег, якщо він має вказаний атрибут,
+    значення якого має корінь з вказаного value
+
+    div[class*="btn"] {
+    background: blue;
+    }
+
+    [atr*="value"]
+    atr — це атрибут
+    value — це значення
+
+    &lt;div class="btn"&gt;&lt;/div&gt;
+    &lt;div class="btn-info"&gt;&lt;/div&gt;
+    &lt;div class="card-btn"&gt;&lt;/div&gt;
+    &lt;div class="b-btn-b"&gt;&lt;/div&gt;
+
+    btn
+    btn-info
+    card-btn
+    b-btn-b
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор кінцівки
+    значення атрибута
+    
+    Селектор кінцівки значення атрибута — це селектор,
+    який вибирає тег, якщо він має вказаний атрибут,
+    значення якого закінчується з вказаного value
+    
+    div[class$="btn"] {
+    background: blue;
+    }
+    
+    [atr$="value"]
+    atr — це атрибут
+    value — це значення
+    
+    &lt;div class="btn"&gt;&lt;/div&gt;
+    &lt;div class="btn-info"&gt;&lt;/div&gt;
+    &lt;div class="card-btn"&gt;&lt;/div&gt;
+    &lt;div class="b-btn-b"&gt;&lt;/div&gt;
+
+    btn
+    card-btn
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Що таке селектор
+    псевдоелементів?
+    
+    Селектор псевдоелементів — це тип селекторів,
+    який дозволяє стилізувати певні частини елементів
+    
+    Псевдо селектор додається через двійну двокрапку ("::")
+    
+    span::first-letter {
+    color: red;
+    }
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Псевдоелемент
+    першої літери
+    
+    Селектор псевдоелемента першої літери — це селектор,
+    який задає стилізації для першої літери елемента
+    
+    p::first-letter {
+    background: blue;
+    }
+    
+    ::first-letter
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Псевдоелемент
+    першого рядка
+    
+    Селектор псевдоелемента першого рядка — це селектор,
+    який задає стилізації для першого рядка тексту елемента
+    
+    p::first-line {
+    background: blue;
+    }
+    
+    ::first-line
+    
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Псевдоелемент
+    плейсхолдера
+    
+    Селектор псевдоелемента плейсхолдера — це селектор,
+    який задає стилізації для тексту атрибута placeholder тегу input
+    
+    input::placeholder {
+    background: blue;
+    }
+    
+    ::placeholder
+    
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Псевдоелемент
+    ”попереду”
+    
+    Селектор псевдоелемента “попереду” — це селектор,
+    який надає можливість вказати контент, який буде йти попереду
+    основного контенту елемента, та надати йому стилізацію
+    
+    Для цього селектора доступна CSS властивість content,
+    в яку ми вказуємо текст для контенту псевдоелемента
+    
+    input::before {
+    content: "text";
+    }
+    
+    ::before
+    
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Псевдоелемент
+    ”після”
+    
+    Селектор псевдоелемента “після” — це селектор,
+    який надає можливість вказати контент, який буде йти після
+    основного контенту елемента, та надати йому стилізацію
+    
+    Для цього селектора доступна CSS властивість content,
+    в яку ми вказуємо текст для контенту псевдоелемента
+    
+    input::after {
+    content: "text";
+    }
+    
+    ::after
+    
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <div class="card p-5 m-5 card-dark">
+        <input class="input-dark" required />
+        <input class="input-dark" />
+        <input class="input-dark" type="number" />
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <img alt="image small card 100px" class="small-img" src="https://picsum.photos/200/300" height="100px" />
+        <img alt="image card 100px" class="small-img" src="https://picsum.photos/200/300" height="100px" />
+        <img alt="image cardsmall 100px" class="small-img" src="https://picsum.photos/200/300" height="100px" />
+    </div>
+
+    <div class="card p-5 m-5 card-dark img">
+        <img alt="image card 100px small" class="small-img" src="https://picsum.photos/200/300" height="100px" />
+    </div>
+
+    <div class="card p-5 m-5 card-dark img">
+        <img alt="image card 100px small" class="small-img" src="https://picsum.photos/200/300" height="100px" />
+        <a href="https://picsum.photos/200/300" rel="external">Link</a>
+        <br />
+        <button class="btn">Click me!</button>
+        <br />
+        <button class="btn-primary">Click me!</button>
+        <br />
+        <button class="btn btn-primary">Click me!</button>
+        <br />
+        <a class="btn btn-primary" href="https://picsum.photos/200/300"></a>
+        <br />
+        <a class="small btn large-btn btn-primary inbtnsmall big" href="https://picsum.photos/200/300"></a>
+        <br />
+        <a class="btn-info" href="https://picsum.photos/200/300"></a>
+        <br />
+        <a class="big in-btn-small" href="https://picsum.photos/200/300"></a>
+        <br />
+        <a class="btn-info-big" href="https://picsum.photos/200/300"></a>
+    </div>
+
+    <div class="card p-5 m-5 card-dark img">
+        <button class="btn">Click me!</button>
+    </div>
+
+    <div class="card p-5 m-5 card-dark img">
+        <p class="big-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br /> Quam assumenda repellendus
+            fuga
+            facere reiciendis,
+            error mollitia similique dolorum vitae reprehenderit sapiente maiores dignissimos distinctio quisquam
+        </p>
+    </div>
+
+    <div class="card p-5 m-5 card-dark img">
+        <input class="input-dark-big" placeholder="This is text" required />
+        <input class="input-dark p-5" placeholder="This is text" required />
+    </div>
+
+    <div class="card p-5 m-5 card-dark img">
+        <p class="text-before">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br /> Quam assumenda repellendus
+        </p>
+        <p class="text-after">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br /> Quam assumenda repellendus
+        </p>
+        <p class="text-before-after">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br /> Quam assumenda repellendus
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+    {{!--
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/selector1.hbs
+    Адже наш layout/selector1.hbs має вже структуру HTML
+    --}}
