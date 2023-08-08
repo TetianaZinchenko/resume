@@ -1,0 +1,107 @@
+.card-dark {
+  background: #aaa4a4;
+}
+
+#test:target {
+  color: red;
+}
+
+.link:link {
+  color: red;
+}
+
+.link:hover {
+  color: green;
+}
+
+.card:hover {
+  background: rgb(130, 25, 25);
+}
+
+.link1:active {
+  color: rgb(223, 226, 43);
+}
+
+.card:active {
+  background: rgb(85, 39, 154);
+}
+
+input {
+  background-color: grey;
+}
+
+input:focus {
+  background-color: white;
+}
+
+.testcard:focus-within {
+  background: rgb(45, 228, 201);
+}
+
+.card:lang(en) {
+  background: yellow;
+}
+
+.card:lang(uk) > p {
+  background: yellowgreen;
+}
+
+.card:lang(uk) > span::after {
+  content: ' (uk)';
+}
+
+button:enabled {
+  background: rgb(234, 66, 208);
+}
+
+button:disabled {
+  background: rgb(218, 146, 207);
+}
+
+.inp:read-write {
+  background-color: blue;
+}
+
+.inp:read-only {
+  background-color: rgb(45, 228, 201);
+}
+
+input[type='checkbox'] ~ span {
+  color: red;
+}
+
+input[type='checkbox']:checked ~ span {
+  color: rgb(51, 0, 255);
+}
+
+.valid:valid {
+  background: rgb(218, 218, 73);
+}
+
+.valid:invalid {
+  background: rgb(218, 73, 78);
+}
+
+.valid:optional {
+  background: rgb(109, 218, 73);
+}
+
+.number:focus {
+  background: grey;
+}
+
+.number:out-of-range {
+  background: orangered;
+}
+
+.number:in-range {
+  background: green;
+}
+
+.number:invalid {
+  background: red;
+}
+
+input:placeholder-shown ~ span {
+  background: pink;
+}

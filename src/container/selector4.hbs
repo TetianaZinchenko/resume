@@ -1,0 +1,597 @@
+{{!--
+Це код container файлу для selector4 сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/selector4"
+--}}
+
+<main>
+
+    <hr />
+    <hr />
+
+    <div class="display-1"><mark>Селектори. 4 частина</mark></div>
+
+    <p>
+
+    <pre>
+
+    Що таке селектор
+    псевдоклас?
+    
+    Селектор псевдоклас — це ключове слово, додане до
+    звичайного селектора, яке визначає його особливий стан
+    
+    Селектор псевдокласу додається через двокрапку (":")
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    цільового тегу
+    
+    Селектор цільового тегу — це селектор, який вибирає тег,
+    якщо він має свій якір та в URL сторінки вибраний цей якір
+    
+    Якір — це посилання в форматі #id, в якому замість id вказане
+    значення атрибута id певного тегу.
+    
+    При натисканні на таке посилання, браузер буде прокручувати
+    сторінку до тегу з цим id
+    
+    #section1:target {
+    color: blue;
+    }
+    
+    :target
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    невідвіданих
+    посилань
+    
+    Селектор невідвіданих посилань — це селектор, який вибирає
+    тег &lt;a&gt;, якщо по його посиланню користувач ще не переходив
+    
+    a:link {
+    color: blue;
+    }
+    
+    :link
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор відвіданих
+    посилань
+    
+    Селектор відвіданих посилань — це селектор, який вибирає тег
+    &lt;a&gt;, якщо по його посиланню користувач уже переходив
+    
+    a:visited {
+    color: purple;
+    }
+
+    :visited
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор наведення
+    
+    Селектор наведення — це селектор, який дозволяє вказати
+    стилізацію в той момент, коли користувач навів мишкою на тег
+    
+    a:hover {
+    color: blue;
+    }
+    
+    :hover
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    активного тегу
+    
+    Селектор активного тегу — це селектор, який вибирає
+    тег, коли користувач на нього натиснув мишкою
+    
+    button:active {
+    color: blue;
+    }
+    
+    :active
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    фокусованого тегу
+    
+    Селектор фокусованого тегу — це селектор,
+    який вибирає тег, коли користувач почав взаємодіяти з ним
+    
+    Цей селектор схожий на селектор активного тегу, але
+    використовується в більшості випадках для &lt;input&gt; тегу
+    
+    input:focus {
+    color: blue;
+    }
+    
+    :focus
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    фокус всередині тегу
+    
+    Селектор фокус всередині тегу — це селектор,
+    який вибирає тег, коли користувач почав взаємодіяти
+    з ним або з його дитячими тегами
+    
+    Цей селектор схожий на селектор фокусованого тегу, але
+    використовується в більшості випадках для &lt;form&gt; тегу,
+    щоб задати стилізацію при взаємодії з елементами форми
+    
+    form:focus-within {
+    background-color: blue;
+    }
+    
+    :focus-within
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор мови тегу
+    
+    Селектор мови тегу — це селектор, який вибирає тег,
+    який має атрибут lang з вказаним значенням
+    
+    p:lang(fr) {
+    color: blue;
+    }
+    
+    :lang(value)
+    value — це код мови
+    
+    &lt;p lang="fr"&gt;Bonjour!&lt;/p&gt;
+    &lt;p lang="en"&gt;Hello!&lt;/p&gt;
+
+    Bonjour!
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    увімкненого тегу
+    
+    Селектор увімкненого тегу — це селектор, який вибирає тег
+    форми, який доступний та не заблокований для взаємодії
+    
+    button:enabled {
+    color: blue;
+    }
+    
+    :enabled
+    
+    &lt;button&gt;Enabled button&lt;/button&gt;
+    &lt;button disabled&gt;Disabled button&lt;/button&gt;
+
+    Enabled button
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    вимкненого тегу
+    
+    Селектор вимкненого тегу — це селектор, який вибирає тег
+    форми, який не доступний і є заблокований для взаємодії
+    
+    button:disabled {
+    color: blue;
+    }
+    
+    :disabled
+    
+    &lt;button&gt;Enabled button&lt;/button&gt;
+    &lt;button disabled&gt;Disabled button&lt;/button&gt;
+
+    Disabled button
+    
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    редагованого тегу
+    
+    Селектор редагованого тегу — це селектор, який вибирає тег
+    форми, в який ми можемо вводити свої значення
+    
+    input:read-write {
+    color: blue;
+    }
+    
+    :read-write
+    
+    &lt;input&gt;
+    &lt;input readonly&gt;
+
+    &lt;input&gt;
+
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    нередагованого тегу
+    
+    Селектор нередагованого тегу — це селектор, який вибирає тег
+    форми, в який ми не можемо вводити значення, а лише читати
+    
+    input:read-only {
+    color: blue;
+    }
+    
+    :read-only
+    
+    &lt;input&gt;
+    &lt;input readonly&gt;
+
+    &lt;input readonly&gt;
+    
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    відміченого тегу
+    
+    Селектор відміченого тегу — це селектор, який вибирає
+    тег форми, який був відмічений або вибраний користувачем
+    
+    .input-checkbox:checked {
+    background-color: green;
+    }
+    
+    :checked
+    
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    валідного тегу
+    
+    Селектор валідного тегу — це селектор, який вибирає
+    тег поля форми, який пройшов валідацію і є валідним
+    
+    input:valid {
+    background-color: green;
+    }
+    
+    :valid
+        
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    не валідного тегу
+    
+    Селектор не валідного тегу — це селектор, який вибирає
+    тег поля форми, який не пройшов валідацію і не є валідним
+    
+    input:invalid {
+    background-color: green;
+    }
+    
+    :invalid
+            
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор
+    необов’язкового тегу
+    
+    Селектор необов’язкового тегу — це селектор,
+    який вибирає тег поля форми, який є необов’язковим
+    
+    input:optional {
+    background-color: green;
+    }
+    
+    :optional
+            
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор за межі
+    діапазону тегу
+    
+    Селектор за межі діапазону тегу — це селектор, який
+    вибирає &lt;input&gt; тег, значення якого виходить за межі
+    вказаного діапазону атрибутів min та max
+    
+    input:out-of-range {
+    background-color: green;
+    }
+    
+    :out-of-range
+            
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор в межах
+    діапазону тегу
+    
+    Селектор в межах діапазону тегу — це селектор, який
+    вибирає &lt;input&gt; тег, значення якого знаходиться в межах
+    вказаного діапазону атрибутів min та max
+    
+    input:in-range {
+    background-color: green;
+    }
+    
+    :in-range
+            
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <p>
+
+    <pre>
+
+    Селектор наявності
+    плейсхолдера в тегу
+    
+    Селектор наявності плейсхолдера в тегу — це селектор,
+    який вибирає &lt;input&gt; тег, який має атрибут placeholder
+    
+    input:placeholder-shown {
+    background-color: green;
+    }
+    
+    :placeholder-shown
+            
+    </pre>
+
+    </p>
+
+    <hr />
+    <hr />
+
+    <div class="card p-5 m-5 card-dark">
+        <a href="#test">Click me!</a>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        Test
+    </div>
+
+    <div id="test" class="card p-5 m-5 card-dark">
+        Якір
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <a class="link" href="https://www.googlewww.com/">Test link</a>
+        <a class="link" href="https://translate.googlewww.com/">Test link</a>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <a class="link1" href="#">Test link</a>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <input />
+    </div>
+
+    <div class="card p-5 m-5 card-dark testcard">
+        <input />
+    </div>
+
+    <div lang="en" class="card p-5 m-5 card-dark">
+        Test
+    </div>
+
+    <div lang="uk" class="card p-5 m-5 card-dark">
+        Тест
+        <span>Привіт!</span>
+        <p>Це тестовий текст.</p>
+    </div>
+
+    <div class="p-5 m-5 card-dark">
+        <button>Enabled button</button>
+        <button disabled>Disabled button</button>
+    </div>
+
+    <div class="p-5 m-5 card-dark">
+        <input class="inp" />
+        <input class="inp" readonly />
+        <input class="inp" disabled />
+    </div>
+
+    <div class="p-5 m-5 card-dark">
+        <div>
+            <input type="checkbox" />
+            <span>1 input</span>
+        </div>
+        <div>
+            <input type="checkbox" checked />
+            <span>2 input</span>
+        </div>
+        <div>
+            <input type="checkbox" />
+            <span>3 input</span>
+        </div>
+    </div>
+
+    <div class="p-5 m-5 card-dark">
+        <input class="valid" />
+        {{!-- <input class="valid" optional /> --}}
+        <input type="email" required class="valid" />
+        <input type="email" required class="valid" />
+    </div>
+
+    {{!-- optional вказувати не обов'язково --}}
+
+    <div class="p-5 m-5 card-dark">
+        <div>
+            <input type="email" required class="valid" placeholder="test" />
+            <span>Test text</span>
+        </div>
+        <div class="mt-5">
+            <input type="number" min="10" max="20" required class="number" />
+        </div>
+    </div>
+
+    {{!--
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/selector4.hbs
+    Адже наш layout/selector4.hbs має вже структуру HTML
+    --}}
