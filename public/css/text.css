@@ -1,0 +1,138 @@
+.card-dark {
+  background: #aaa4a4;
+}
+
+.card1 > p {
+  color: #002547;
+}
+
+.card1 > p {
+  color: rgb(223, 12, 12);
+}
+
+.card1 > p {
+  color: rgba(223, 12, 12, 0.75);
+}
+
+.card1 > p {
+  color: hsl(101, 100%, 50%);
+}
+
+.card1 > p {
+  color: hsla(101, 100%, 50%, 0.5);
+}
+
+.card1 > p {
+  color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 2px blue;
+}
+
+.card1 > p:focus,
+.card1 > p:active,
+.card1 > p:hover {
+  -webkit-text-fill-color: rgb(246, 255, 0);
+  -webkit-text-stroke: 2px rgb(255, 0, 225);
+  direction: ltr;
+  direction: rtl;
+}
+
+.card2 > p {
+  color: initial;
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke: 2px initial;
+}
+
+.card3 {
+  color: blueviolet;
+}
+
+.card3 > p {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke: 2px inherit;
+}
+
+.card4 > p {
+  color: unset;
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke: 2px unset;
+}
+
+.card4 {
+  border: none;
+}
+
+.card5 > p {
+  writing-mode: horizontal-tb;
+}
+
+.card6 > p {
+  writing-mode: vertical-rl;
+}
+
+.card7 > p {
+  writing-mode: vertical-lr;
+}
+
+.card8 > p {
+  text-align: left;
+}
+
+.card9 > p {
+  text-align: right;
+}
+
+.card10 > p {
+  text-align: center;
+}
+
+.card10 > span {
+  text-align: center;
+}
+
+.card11 > p {
+  text-align: start;
+  text-align: end;
+  text-align: justify;
+}
+
+.card12 > p {
+  text-transform: uppercase;
+}
+
+.card13 > p {
+  text-transform: lowercase;
+}
+
+.card14 > p {
+  text-transform: capitalize;
+}
+
+.card15 > pre {
+  tab-size: 4;
+  tab-size: 10px;
+}
+
+.card16 > p {
+  letter-spacing: normal;
+  letter-spacing: 20px;
+  letter-spacing: 3em;
+}
+
+.card17 > p {
+  text-decoration: overline dashed red;
+  text-decoration-color: blue;
+  text-decoration-line: line-through;
+  text-decoration-line: overline;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-style: solid;
+  text-decoration-style: wavy;
+  text-decoration-style: double;
+  text-decoration-style: dashed;
+}
+
+.card17 > p:hover {
+  text-decoration: line-through solid red;
+}

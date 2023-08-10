@@ -1,0 +1,552 @@
+{{!--
+Це код container файлу для text сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/text"
+--}}
+
+<main class="p-5">
+
+	<hr />
+	<hr />
+
+	<div class="display-1"><mark>Відображення тексту</mark></div>
+
+	<p>
+
+	<pre>
+
+    Колір
+    
+    color — це CSS властивість, яка визначає колір тексту
+    
+    h1 {
+    color: #ff0000; (# ff0000)
+    }
+    color
+    
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Колір
+    
+    Значення Опис
+    
+    #RGB / #RRGGBB
+    #d63384 (# d63384)
+    
+    HEX - Шістнадцяткова форма опису відтінку
+    
+    red, blue Текстова назва кольору, яка зашита в CSS
+    
+    rgb(R,G,B)
+    rgb(255, 87, 51) Формат RGB (rgb (255, 87, 51))
+    
+    rgba(R,G,B, A)
+    rgb(255, 87, 51, 0.5) (rgb (255, 87, 51, 0.5))
+    
+    Формат RGBA, який додає
+    A параметр — прозорість кольору
+    
+    hsl(H, S, L)
+    hsl(11, 100%, 60%) (hsl (11, 100%, 60%))
+    
+    Формат HSL, є альтернативою RGB
+    H - відтінок, S - насиченість, L - яскравість
+    
+    hsla(H, S, L, A)
+    hsla(11, 100%, 60%, 0.5) (hsla (11, 100%, 60%, 0.5))
+    
+    Формат HSLA,
+    який додає 4 параметр прозорості кольору
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Вендорні префікси
+    
+    Вендорні префікси (vendor prefixes) — це префікси
+    до CSS властивостей, які забезпечують коректну
+    роботу CSS властивостей в потрібних браузерах
+    
+    -webkit-
+    Google Chrome, Apple Safari, Opera
+    
+    -moz-
+    Mozilla Firefox
+    
+    -ms-
+    Internet Explorer та Microsoft Edge
+    
+    -o-
+    Opera
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Колір заливки тексту
+    
+    text-fill-color — це CSS властивість, яка визначає колір
+    заповнення контенту (текст, svg іконка тощо)
+    
+    В більшості випадках text-fill-color
+    використовується разом з text-stroke
+    
+    h1 {
+    text-fill-color: #ff0000; (# ff0000)
+    }
+    
+    text-fill-color
+    -webkit-text-fill-color
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Штрихи тексту
+    
+    text-stroke — це CSS властивість, яка визначає
+    колір та ширину штрихів для текстових символів
+    
+    h1 {
+    text-stroke: 2px red
+    }
+        
+    text-stroke
+    -webkit-text-stroke
+    
+    Значення Опис
+    
+    &lt;length&gt; Ширина штриха
+    
+    &lt;color&gt; Колір обведення
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Напрямок тексту
+    
+    direction — це CSS властивість, яка вказує напрямок тексту
+    
+    h1 {
+    direction: rtl
+    }
+        
+    direction
+    
+    Значення Опис
+    
+    ltr Текст відображається зліва направо (за замовчуванням)
+    
+    rtl Текст відображається справа наліво
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Глобальні значення
+    властивостей
+    
+    Глобальні значення властивостей — це значення,
+    які існують майже в усіх CSS властивостях
+    
+    Значення Опис
+    
+    initial Значення властивості встановлюється за замовчуванням
+    
+    inherit Значення властивості успадковується від батьківського тегу
+    
+    unset
+    
+    Значення властивості успадковується від батьківського тегу
+    в тому випадку, якщо це можливо, в іншому випадку
+    значення встановлюється за замовчуванням
+    
+    none Скасовує будь-які значення властивості
+    та встановити значення за замовчуванням
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Орієнтація тексту
+    
+    writing-mode — це CSS властивість, яка відповідає
+    за орієнтацію відображення тексту
+    
+    h1 {
+    writing-mode: horizontal-tb
+    }
+        
+    writing-mode
+    
+    Значення Опис
+    
+    horizontal-tb Горизонтальний рядок, вертикальна колонка
+    
+    Значення за замовчуванням
+    
+    vertical-rl Вертикальний рядок,
+    
+    горизонтальна колонка з напрямком справа наліво
+    
+    vertical-lr Вертикальний рядок,
+    
+    горизонтальна колонка з напрямком зліва направо
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Вирівнювання тексту
+    
+    text-align — це CSS властивість, яка встановлює
+    горизонтальне вирівнювання тексту
+    
+    h1 {
+    text-align: start
+    }
+        
+    text-align
+    
+    Значення Опис
+    
+    left Вирівнюється по лівій стороні, значення за замовчуванням
+    
+    right Вирівнюється по правій стороні
+    
+    center Вирівнюється по центру
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Вирівнювання тексту
+    
+    Більш просунуті значення для властивості text-align
+    
+    Значення Опис
+    
+    start Вирівнюється по початковій стороні
+    
+    відповідно до напрямку та орієнтації тексту
+    
+    end Вирівнюється по кінцевій стороні
+    
+    відповідно до напрямку та орієнтації тексту
+    
+    justify Розтягує текст на всю ширину контейнера, додаючи
+    додатковий пробіл між словами, якщо це необхідно
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Регістр тексту
+    
+    text-transform — це CSS властивість,
+    яка дозволяє змінювати регістр букв у тексті
+    
+    h1 {
+    text-transform: uppercase
+    }
+        
+    text-transform
+    
+    Значення Опис
+    
+    uppercase Перетворює текст у верхній регістр
+    
+    lowercase Перетворює текст у нижній регістр
+    
+    capitalize Перетворює першу літеру кожного слова у верхній регістр
+    
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Ширина
+    табуляції тексту
+    
+    tab-size — це CSS властивість, яка визначає ширину
+    відступу табуляції у тексті та кількість пробілів, які будуть
+    використані для представлення одного символу табуляції.
+    
+    h1 {
+    tab-size: 4
+    }
+        
+    tab-size
+    
+    Значення Опис
+    
+    Ціле число Кількість пробілів, які будуть еквіваленті одному табу
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Інтервал символів
+    тексту
+    
+    letter-spacing — це CSS властивість,
+    яка визначає інтервали між символами в тексті
+    
+    h1 {
+    letter-spacing: 4px
+    }
+        
+    letter-spacing
+    
+    Значення Опис
+    
+    Довжина Приймає значення в будь-якій одиниці виміру
+    
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    Декорація тексту
+    
+    text-decoration — це CSS властивість, яка додає ефекти
+    до тексту (підкреслення, закреслення тощо)
+    
+    h1 {
+    text-decoration: underline dotted red
+    }
+        
+    text-decoration
+    
+    Значення Опис
+    
+    L T C ---- L - яка лінія, T - тип лінії, C - колір
+    
+    L (line) text-decoration-line
+    
+    T (type) text-decoration-style
+    
+    C (color) text-decoration-color
+    
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    text-decoration-line
+    
+    Значення Опис
+    
+    underline Це значення додає рядок під текстом
+    
+    overline Це значення додає рядок над текстом
+    
+    line-through Це значення додає лінію через середину тексту
+        
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+    text-decoration-style
+    
+    Значення Опис
+    
+    solid Надає звичайну повну лінію
+    
+    double Надає подвійну лінію
+    
+    dotted Надає пунктирну лінію
+    
+    dashed Надає штриховану лінію
+    
+    wavy Надає хвилясту лінію
+            
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<div class="card p-5 m-5 card1">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card2">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card3">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card4">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card5">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card6">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card7">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card8">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card9">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="p-5 m-5 card10">
+		<p>Hello world!</p>
+		<span>span</span>
+	</div>
+
+	<div class="card p-5 m-5 card11">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card12">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card13">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card14">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card15">
+		<p>Hello world! Hello world! Hello world! Hello world! Hello world! Hello world! Hello world! Hello world!</p>
+		<pre>				Hello world!		Hello world!</pre>
+	</div>
+
+	{{!-- https://developer.mozilla.org/en-US/docs/Web/CSS/tab-size --}}
+	{{!-- 123 --}}
+
+	<div class="card p-5 m-5 card16">
+		<p>Hello world!</p>
+	</div>
+
+	<div class="card p-5 m-5 card17">
+		<p>Hello world!</p>
+	</div>
+
+	{{!--
+	Цей код містить лише те, що буде виводитись в {{{body}}} в layout/text.hbs
+	Адже наш layout/text.hbs має вже структуру HTML
+	--}}
