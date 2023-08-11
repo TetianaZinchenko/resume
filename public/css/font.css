@@ -1,0 +1,52 @@
+.card-dark {
+  background: #aaa4a4;
+}
+
+* {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-display: swap;
+}
+
+.card1 > p {
+  font-family: cursive;
+}
+
+.card2 > p {
+  font-family: fantasy;
+}
+
+.card3 > p {
+  font-size: 24px;
+}
+
+.card4 > p {
+  font-weight: bold;
+}
+
+.card5 > p {
+  font-weight: 900;
+}
+
+.card6 {
+  font-weight: 400;
+}
+
+.text1 {
+  font-weight: bolder;
+}
+
+.card7 {
+  font-weight: 900;
+}
+
+.text2 {
+  font-weight: lighter;
+}
+
+.card8 > p {
+  font-style: italic;
+}
+
+.card9 > p {
+  font-style: oblique;
+}
