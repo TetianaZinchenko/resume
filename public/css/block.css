@@ -1,0 +1,111 @@
+.test {
+  display: none;
+}
+
+.block1 {
+  display: block;
+  margin: 10px;
+  margin: 5%;
+  background: blue;
+}
+
+.inline-block1 {
+  display: inline-block;
+  background: green;
+}
+
+.inline-block2 {
+  display: inline-block;
+  background: red;
+  width: 250px;
+}
+
+.block2 {
+  display: block;
+  background: yellowgreen;
+  margin: auto;
+  width: 250px;
+}
+
+.block3 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  width: 50%;
+}
+
+.block4 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  width: fit-content;
+}
+
+.block5 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  width: min-content;
+}
+
+.block6 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  width: max-content;
+}
+
+.block7 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  height: 50px;
+}
+
+.block8 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  width: 200px;
+  height: auto;
+  min-height: 400px;
+}
+
+.block9 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  width: 200px;
+  height: auto;
+  max-height: 300px;
+}
+
+.block10 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  min-width: min-content;
+  max-width: 600px;
+  min-height: 100px;
+  max-height: max-content;
+}
+
+.block11 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  /* width: min-content; */
+  width: 100%;
+  max-width: 600px;
+  /* min-height: 100px; */
+  /* max-height: max-content; */
+}
+
+.block12 {
+  display: block;
+  background: gainsboro;
+  margin: auto;
+  width: 100%;
+  padding: 20px;
+  box-sizing: content-box;
+}
