@@ -1,0 +1,567 @@
+{{!--
+Це код container файлу для content сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/content"
+--}}
+
+<div class="p-5">
+
+	<hr />
+	<hr />
+
+	<div class="display-1"><mark>Робота з обрізанням та перенесенням контенту</mark></div>
+
+	<p>
+
+	<pre>
+
+	Видимість
+	
+	visibility — це CSS властивість, яка допомагає приховати
+	певний елемент з екрана браузера та не ламає верстку
+	
+	div {
+	visibility: hidden;
+	}
+		
+	visibility
+	
+	Значення Опис
+	
+	visible Показати елемент
+	
+	hidden Приховати елемент
+	
+	collapse Працює як hidden, але покращує відображення в певних випадках
+    
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	visibility: collapse
+	
+	- Для &lt;table&gt; вона дозволяє приховувати рядки або стовпці таблиці,
+		видаляючи їх простір, але зберігаючи розміри інших елементів таблиці
+
+	- Рубінові анотації (&lt;ruby&gt;) приховані, а простір, який вони займали,
+		видаленo
+
+	- Згорнуті елементи при роботі з display: flex
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Обрізання блоку
+	
+	overflow — це CSS властивість, яка відповідає
+	за те, як саме потрібно показати контент блоку,
+	якщо він не влазить
+	
+	h1 {
+	overflow: hidden;
+	}
+		
+	overflow
+	
+	Значення Опис
+	
+	overflow-x Якщо треба задати для горизонтальної сторони
+	
+	overflow-y Якщо треба задати для вертикальної сторони
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Обрізання блоку
+	
+	Значення Опис
+	
+	auto Браузер автоматично визначає, чи повинен додавати
+	смужку прокрутки відповідно до розміру вмісту
+	
+	visible Елемент виводиться з області блоку, що може призвести до	
+	перекриття інших елементів на сторінці
+	
+	hidden Вміст, що виходить за межі блоку, буде приховано
+	
+	clip Працює як hidden, але повністю забороняє прокрутку блоку	
+	через просунуті технології та JavaScript
+	
+	scroll
+	
+	Додає смужки прокрутки, щоб користувач міг
+	прокручувати вміст блоку, але смужки займають місце
+	збоку справа
+	
+	overlay Працює як auto, але смужки прокручування намальовані	
+	поверх контенту, а не займають місце збоку справа
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Обрізання тексту
+	
+	text-overflow — це CSS властивість, яка допомагає додати
+	три крапки (“...”) в кінці тексту, якщо елемент не влазить
+	
+	span {
+	text-overflow: ellipsis;
+	}
+	
+	text-overflow
+	
+	Значення Опис
+	
+	clip Текст обрізається, коли він виходить за межі блоку,
+	значення за замовчуванням
+	
+	ellipsis Текст обрізається, коли він виходить за межі блоку,
+	але в кінці додається три крапки (“...”)
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Пропуск
+	білих символів
+	
+	white-space — це CSS властивість, яка обробляє пробіли
+	між словами та перенесення рядків усередині елемента.
+	
+	span {
+	white-space: pre-wrap;
+	}
+		
+	white-space
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	white-space
+	
+	Значення Опис
+	
+	normal
+	
+	Між словами вставляється лише по одному пропуску,
+	додаткові пропуски відкидаються. Текст переноситься
+	лише у разі потреби.
+	
+	nowrap Забороняє перенесення рядків, за винятком
+	застосування &lt;br&gt;.
+	
+	pre Відображає пробіли та перенесення так, як є в коді
+	
+	pre-wrap Відображає пробіли та перенесення так, як є в коді,
+	але в потрібних місцях переноситься текст
+	
+	pre-line
+	
+	Видаляє всі додаткові пробіли в коді,
+	відображає символи перенесення,
+	в потрібних місцях переноситься текст
+	
+	break-spaces Працює як pre-wrap,
+	але переносить пробіли на новий рядок
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Перенесення тексту
+	
+	overflow-wrap — це CSS властивість, яка відповідає як саме
+	потрібно перенести текст, якщо все останнє слово не може
+	розділитись на частину та перейти на новий рядок
+	
+	span {
+	overflow-wrap: break-word;
+	}
+		
+	overflow-wrap
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Перенесення тексту
+	
+	Значення Опис
+	
+	normal Значення за замовчуванням.
+	
+	anywhere Якщо слово не поміщається на поточному рядку, то
+	розрив слова буде відбуватись в будь-яких місцях
+	
+	break-word Якщо слово не поміщається на поточному рядку, то
+	розрив слова буде відбуватись в найкращому місці
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Перенесення слова
+	
+	word-break — це CSS властивість, яка відповідає за
+	можливість перенесення слів на новий рядок
+	
+	span {
+	word-break: break-all;
+	}
+		
+	word-break
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Перенесення слова
+	
+	Значення Опис
+	
+	normal Значення за замовчуванням.
+	
+	break-all Перенесення слів не застосовується,
+	але слова розбиваються в потрібному місці
+	
+	keep-all Забороняє розрив між словами
+	
+	break-word Слова, які не поміщаються, будуть розбиті
+	на дві частини, щоб вони вмістилися
+    
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Перенесення слова
+	через символ
+	
+	hyphens — це CSS властивість, яка дозволяє
+	створювати м’які переноси слів на новий рядок
+	
+	span {
+	hyphens: manual;
+	}
+		
+	hyphens
+	&shy; (& shy ;)
+	
+	Значення Опис
+	
+	none Слова не переносяться
+	
+	auto Браузер сам вирішує як треба переносити
+	
+	manual Слова переносяться через символ (&shy; (& shy ;))
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Символ
+	перенесення слів
+	
+	hyphenate-character — це CSS властивість, яка дозволяє
+	встановлювати символ, який буде використовуватися для
+	перенесення слів у тексті, якщо такий текст містить дефіси
+	для перенесення слів.
+	
+	.example {
+	hyphenate-character: "———";
+	}
+		
+	hyphenate-character
+    
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Символ
+	перенесення слів
+	
+	Значення Опис
+	
+	auto Браузер використовує дефіс для перенесення слів.
+	Значення за замовчуванням
+	
+	&lt;string&gt; Задається конкретний символ для перенесення слів
+	у вигляді рядка
+    
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Інтервал слів
+	
+	word-spacing — це CSS властивість,
+	яка визначає інтервали між словами в тексті
+	
+	h1 {
+	word-spacing: 4px
+	}
+		
+	word-spacing
+	
+	Значення Опис
+	
+	normal Значення за замовчуванням
+	
+	Довжина Приймає значення в будь-якій одиниці виміру
+        
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	Зміна розмірів
+	
+	resize — це CSS властивість, яка використовується для
+	встановлення можливості зміни розмірів елемента
+	користувачем за допомогою миші
+	
+	.example {
+	resize: both;
+	}
+		
+	resize
+
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<p>
+
+	<pre>
+
+	resize
+	
+	значення Опис
+	
+	none Браузер не надає змінити розмір елемента користувачем.
+	Значення за замовчуванням.
+	
+	both Дозволяє змінювати розміри елемента користувачем як по
+	горизонталі, так і по вертикалі.
+	
+	horizontal Дозволяє змінювати розміри елемента користувачем лише
+	по горизонталі.
+	
+	vertical Дозволяє змінювати розміри елемента користувачем лише
+	по вертикалі.
+        
+    </pre>
+
+	</p>
+
+	<hr />
+	<hr />
+
+	<h2 class="test_title">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur beatae magni voluptas ut delectus labore,
+		provident, eos, distinctio vitae laboriosam incidunt. Ipsa nobis possimus ad voluptatibus est similique,
+		molestias beatae!
+	</h2>
+
+	<p class="test">
+		1111111111111111111111111111111 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, placeat quae
+		quam vitae esse cupiditate
+		officia itaque libero nemo soluta corporis nulla! Officiis maiores non rerum porro aliquid rem perferendis!
+	</p>
+
+	<p class="test1">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, <span
+			class="overflow">placeatquaequamvitaeessecupiditate</span>
+		officia itaque libero nemo soluta corporis nulla! Officiis maiores non rerum porro aliquid rem perferendis!
+	</p>
+
+	<p class="test2">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
+		<span class="test_span">placeatquaequamvitaeessecupiditate</span>
+		officia itaque libero nemo soluta corporis nulla! Officiis maiores non rerum porro aliquid rem perferendis!
+	</p>
+
+	<p class="test3">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
+		<span class="test_span">placeatquae&shy;quamvitaees&shy;secupiditate</span>
+		officia itaque libero nemo soluta corporis nulla! Officiis maiores non rerum porro aliquid rem perferendis!
+	</p>
+
+	<p class="test4">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
+		<span class="test_span">placeatquaequamvitaeessecupiditate</span>
+		officia itaque libero nemo soluta corporis nulla! Officiis maiores non rerum porro aliquid rem perferendis!
+	</p>
+
+	<p class="test5">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
+		<span class="test_span">placeatquaequamvitaeessecupiditate</span>
+		officia itaque libero nemo soluta corporis nulla! Officiis maiores non rerum porro aliquid rem perferendis!
+	</p>
+
+	<div class="page">
+		<div class="page_content">
+			<div class="page_block">
+				<header class="header row g-0">
+					<div class="col-3">
+						{{> logo}}
+					</div>
+
+					<nav class="header_nav col-9">
+						<div class="header_nav_right">
+							{{> navTemplate1 list=header}}
+						</div>
+					</nav>
+				</header>
+
+			</div>
+
+			<div class="page_block">
+				{{> hero title=hero.title text=hero.text}}
+			</div>
+
+			<div class="page_block">
+				<main class="row g-0 plans">
+
+					{{#each plans}}
+
+					<div class="col plans_card">
+						{{> card data=this}}
+					</div>
+
+					{{/each}}
+
+				</main>
+			</div>
+
+			<div class="page_block">
+				<footer class="row g-0 footer">
+					<div class="col-3">
+						{{> logo}}
+						<span class="footer_copyright">Copyright 2023-2024</span>
+					</div>
+					{{#each footer}}
+					<div class="col-3">
+						<span class="footer_title">{{title}}</span>
+						{{> navTemplate1 list=links isVertical=true}}
+					</div>
+					{{/each}}
+				</footer>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/content.hbs
+Адже наш layout/content.hbs має вже структуру HTML
+--}}
