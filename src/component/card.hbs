@@ -7,11 +7,16 @@
 			<span class="card_price_amount">${{price}}</span>
 			<span class="card_price_duration">/ no</span>
 		</div>
-		<div class="card_block">
+		{{!-- <div class="card_block">
 			{{#each features}}
 			<span class="card_description_item">{{this}}</span>
 			{{/each}}
-		</div>
+		</div> --}}
+		<ul class="card_block">
+			{{#each features}}
+			<li class="card_description_item">{{this}}</li>
+			{{/each}}
+		</ul>
 		<div class="card_block">
 			<button
 				class="btn {{#if @first}}btn-outline-primary{{else}}btn-primary{{/if}} card_button">{{button}}</button>
