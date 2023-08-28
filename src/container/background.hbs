@@ -1134,7 +1134,7 @@
 
 					<nav class="header_nav col-9">
 						<div class="header_nav_right">
-							{{> navTemplate1 list=header}}
+							{{> navTemplate list=header}}
 						</div>
 					</nav>
 				</header>
@@ -1170,7 +1170,7 @@
 					{{#each footer}}
 					<div class="col-3">
 						<span class="footer_title">{{title}}</span>
-						{{> navTemplate1 list=links isVertical=true}}
+						{{> navTemplate list=links isVertical=true}}
 					</div>
 					{{/each}}
 				</footer>
